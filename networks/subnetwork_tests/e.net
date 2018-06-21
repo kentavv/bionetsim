@@ -1,0 +1,193 @@
+<?xml version="1.0" standalone="yes"?>
+<Network>
+ <Info>
+  <Program>Network Editor 0.07 devel</Program>
+  <Format>19</Format>
+  <SaveDateTime>Mon Oct 13 13:58:08 2003</SaveDateTime>
+  <Version>8</Version>
+ </Info>
+ <Editor>
+  <GridSpacing>20 20</GridSpacing>
+  <SnapToGrid/>
+  <DrawLabel/>
+  <DrawIcon/>
+ </Editor>
+ <Fitness>
+  <Function>Null</Function>
+ </Fitness>
+ <Simulation>
+  <SimulationMethod>ODE</SimulationMethod>
+  <TimeBegin>0</TimeBegin>
+  <TimeEnd>160</TimeEnd>
+  <TimeStepSize>0.1</TimeStepSize>
+  <SteadyStateTolerance>1e-06</SteadyStateTolerance>
+  <AbsoluteTolerance>1e-08</AbsoluteTolerance>
+  <RelativeTolerance>0.0001</RelativeTolerance>
+  <MaxStep>1</MaxStep>
+  <MinStep>0</MinStep>
+  <Environments>
+   <Environment current="true" >Environment 1</Environment>
+  </Environments>
+  <NumReplicates>20</NumReplicates>
+  <HistogramUpdateRate>-1</HistogramUpdateRate>
+ </Simulation>
+ <Molecules>
+  <DNAMolecule>
+   <Label>E</Label>
+   <Id>1</Id>
+   <Pos>460 360</Pos>
+   <InitialConcentration>10</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <DNAMolecule>
+   <Label>S</Label>
+   <Id>2</Id>
+   <Pos>460 460</Pos>
+   <InitialConcentration>1000</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <DNAMolecule>
+   <Label>P</Label>
+   <Id>3</Id>
+   <Pos>800 420</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+ </Molecules>
+ <Subnetworks>
+  <Subnetwork>
+   <Label>MM Rxn</Label>
+   <Id>4</Id>
+   <Pos>643 408</Pos>
+   <Network>
+    <Molecules>
+     <DNAMolecule>
+      <Label>S</Label>
+      <Id>1</Id>
+      <Pos>140 460</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DefaultCoefficient>1</DefaultCoefficient>
+      <DecayRate>0</DecayRate>
+      <Exported/>
+     </DNAMolecule>
+     <DNAMolecule>
+      <Label>E</Label>
+      <Id>2</Id>
+      <Pos>140 360</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DefaultCoefficient>1</DefaultCoefficient>
+      <DecayRate>0</DecayRate>
+      <Exported/>
+     </DNAMolecule>
+     <DNAMolecule>
+      <Label>ES</Label>
+      <Id>3</Id>
+      <Pos>360 420</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DefaultCoefficient>1</DefaultCoefficient>
+      <DecayRate>0</DecayRate>
+     </DNAMolecule>
+     <DNAMolecule>
+      <Label>P</Label>
+      <Id>4</Id>
+      <Pos>600 420</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DefaultCoefficient>1</DefaultCoefficient>
+      <DecayRate>0</DecayRate>
+      <Exported/>
+     </DNAMolecule>
+    </Molecules>
+    <Subnetworks/>
+    <Reactions>
+     <MassActionReaction>
+      <Label>Rxn 1</Label>
+      <Id>5</Id>
+      <Pos>240 420</Pos>
+      <Kf>1</Kf>
+      <Kr>1</Kr>
+      <NotInitialized/>
+      <Edges>
+       <ReactionEdge>
+        <Id>7</Id>
+        <Reactant>
+         <Label>E</Label>
+         <Id>2</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>8</Id>
+        <Reactant>
+         <Label>S</Label>
+         <Id>1</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>9</Id>
+        <Product>
+         <Label>ES</Label>
+         <Id>3</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>10</Id>
+        <Reactant>
+         <Label>ES</Label>
+         <Id>3</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+      </Edges>
+     </MassActionReaction>
+     <MassActionReaction>
+      <Label>Rxn 2</Label>
+      <Id>6</Id>
+      <Pos>480 420</Pos>
+      <Kf>1</Kf>
+      <Kr>1</Kr>
+      <NotInitialized/>
+      <Edges>
+       <ReactionEdge>
+        <Id>11</Id>
+        <Reactant>
+         <Label>ES</Label>
+         <Id>3</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>12</Id>
+        <Product>
+         <Label>P</Label>
+         <Id>4</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>13</Id>
+        <Product>
+         <Label>E</Label>
+         <Id>2</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+        <InternalNodes>
+         <InternalNode>
+          <Id>14</Id>
+          <Pos>480 360</Pos>
+         </InternalNode>
+        </InternalNodes>
+       </ReactionEdge>
+      </Edges>
+     </MassActionReaction>
+    </Reactions>
+   </Network>
+   <Edges/>
+  </Subnetwork>
+ </Subnetworks>
+ <Reactions/>
+</Network>

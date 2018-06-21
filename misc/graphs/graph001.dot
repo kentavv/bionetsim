@@ -1,0 +1,5 @@
+Graph G001 {
+  A [shape=circle];
+  B [shape=circle];
+  A -- B;
+}

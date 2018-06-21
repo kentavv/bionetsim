@@ -1,0 +1,9 @@
+Graph G019 {
+  A [shape=circle];
+  B [shape=circle];
+  C [shape=circle];
+  D [shape=circle];
+  E [shape=circle];
+  A -- E;
+  B -- E;
+}

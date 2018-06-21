@@ -1,0 +1,17 @@
+0.01	GalExt
+0.0	Gal
+0.0	Glu-6P
+0.0	GAL80
+0.0	GAL4
+0.0	GAL3
+0.0	Gal4_80
+0.0	Gal4_80_3
+0.0	Glu
+0.0	gal4g
+1.0	gal4gX
+0.0	Gal1-2-5-7-10
+1.0	gal*g
+0.0	gal*g-Gal4
+0.01	GluExt
+0.0	Gal3*
+0.0	SignedGlu6

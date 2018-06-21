@@ -1,0 +1,19 @@
+Might be worth examining what BOOST (http://www.boost.org/) has to offer over ranlib.
+
+Configure option for LineGraphView.
+
+Add a minimum and maximum value and position to the parameter scan dialog.
+
+Parameter set dialog
+
+Integration of ga_ode_opt, multi-start local, etc.
+
+Time delays in rxn dialog
+
+Alternative presentation
+
+Move network code into run_simulation
+
+Import/export SBML
+
+

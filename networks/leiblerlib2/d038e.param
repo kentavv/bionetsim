@@ -1,0 +1,59 @@
+Network file: d038e.net
+
+Population size: 200
+# Must be even number if using 2pt crossover
+
+Maximize fitness function: false
+# Must be true or false
+
+Elitism: true
+# Ensure best individual survives - Must be true / false
+
+Replace failures: true;
+# Replace any individual whose fitness could  not be computed
+# with a new random individual - Must be true / false
+
+Simplex size: 2
+# The number of top individuals to perform local area optimization on
+# using the simplex algorithm.  x<=0 => disable
+
+Number of generations: -1
+# -1 => never end
+
+Selection pressure: 0.2
+
+Crossover type: NPt
+# Options are NPt, TwoPt
+
+Shift mutation range: 0.05
+# Shift values by +- 5%
+
+Save best interval: 1
+Save best prefix: best
+Print population interval: 0
+Print population stats interval: 1
+
+Population identity check interval: 1
+Population identity limit: 0.50
+
+Random seed: -1
+# -1 => generate one
+
+Integer parameters: false
+Parameter ranges:
+# Fields _MUST_ be seperated by tabs
+LacI	0	100			# LacI --> 0                                                  	0.010000
+TetR	0	100			# TetR --> 0                                                  	0.010000
+lambda cI	0	100			# lambda cI --> 0                                             	0.010000
+d038 GFP	0	100			# d038 GFP --> 0                                              	1.000000
+T1	0	2000			# LacIg --> LacIg + LacI                                      	1.000000
+T2	0	2000			# TetRg --> TetRg + TetR                                      	1.000000
+PL2	0	2000	0	2000	# (lambda cIg) + 4LacI <-> (lambda cIgX)                      	1.000000	1.000000
+T3	0	2000			# (lambda cIg) --> (lambda cIg) + (lambda cI)                 	1.000000
+L-	0	2000	0	2000	# GFPg + 2(lambda cI) <-> GFPgX                               	10.000000	1.000000
+T4	0	2000			# GFPg --> GFPg + (d038 GFP)                                  	10.000000
+PT	0	2000	0	2004	# TetRg + 2TetR <-> TetRgX                                    	1.000000	1.000000
+PT	0	2000	0	2003	# LacIg + 2TetR <-> LacIgX                                    	1.000000	1.000000
+R1	0	2000	0	2002	# IPTG + LacI <-> LacIX                                       	1.000000	1.000000
+R2	0	2000	0	2001	# aTc + TetR <-> TetRX                                        	1.000000	1.000000
+

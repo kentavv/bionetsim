@@ -1,0 +1,226 @@
+// Molecule labels
+// GalExt
+// GluExt
+// Gal
+// Glu-6P
+// Gal80p
+// Gal4p
+// Gal3p
+// GAL-4-80
+// GAL-4-80-3
+// Glu
+// gal4g
+// gal4gX
+// Gal1-2-5-7-10p
+// GAL
+// GAL-4
+// Gal3p*
+// Reactions
+// GalExt --> Gal
+// Gal1-2-5-7-10p + GalExt --> Gal + Gal1-2-5-7-10p
+// Gal1-2-5-7-10p + Gal --> Glu-6P + Gal1-2-5-7-10p
+// Glu-6P --> Glu
+// Glu + gal4g --> gal4gX + Glu
+// gal4gX --> gal4g
+// gal4g --> gal4g + Gal4p
+// GAL + Gal4p <-> GAL-4
+// GAL-4 + Gal80p <-> GAL-4-80
+// Gal3p* + GAL-4-80 --> GAL-4-80-3 + Gal3p*
+// GAL-4-80-3 --> GAL-4-80
+// GAL-4 --> GAL-4 + Gal80p
+// GAL-4 --> GAL-4 + Gal3p
+// GAL-4-80-3 --> GAL-4-80-3 + Gal80p
+// GAL-4-80-3 --> GAL-4-80-3 + Gal3p
+// GAL-4-80-3 --> GAL-4-80-3 + Gal1-2-5-7-10p
+// GAL-4 --> GAL-4 + Gal1-2-5-7-10p
+// GluExt --> Glu
+// Glu --> 0
+// Gal4p --> 0
+// Gal80p --> 0
+// Gal3p --> 0
+// Gal1-2-5-7-10p --> 0
+// Gal + Gal3p --> Gal + Gal3p*
+// Gal3p* --> Gal3p
+  Matrix Y0(16, 1);
+  N_VIth(Y0, 0) = 4.000000;
+  N_VIth(Y0, 1) = 1.000000;
+  N_VIth(Y0, 2) = 0.000000;
+  N_VIth(Y0, 3) = 0.000000;
+  N_VIth(Y0, 4) = 0.000000;
+  N_VIth(Y0, 5) = 0.000000;
+  N_VIth(Y0, 6) = 0.000000;
+  N_VIth(Y0, 7) = 0.000000;
+  N_VIth(Y0, 8) = 0.000000;
+  N_VIth(Y0, 9) = 0.000000;
+  N_VIth(Y0, 10) = 0.000000;
+  N_VIth(Y0, 11) = 1.000000;
+  N_VIth(Y0, 12) = 0.000000;
+  N_VIth(Y0, 13) = 1.000000;
+  N_VIth(Y0, 14) = 0.000000;
+  N_VIth(Y0, 15) = 0.000000;
+  Matrix KC(27, 1);
+  N_VIth(KC, 0) = 1.000000;
+  N_VIth(KC, 1) = 6.000000;
+  N_VIth(KC, 2) = 12.000000;
+  N_VIth(KC, 3) = 100.000000;
+  N_VIth(KC, 4) = 10.000000;
+  N_VIth(KC, 5) = 1.000000;
+  N_VIth(KC, 6) = 23.000000;
+  N_VIth(KC, 7) = 7.000000;
+  N_VIth(KC, 8) = 9.000000;
+  N_VIth(KC, 9) = 4.000000;
+  N_VIth(KC, 10) = 4.000000;
+  N_VIth(KC, 11) = 8.000000;
+  N_VIth(KC, 12) = 10.000000;
+  N_VIth(KC, 13) = 101.000000;
+  N_VIth(KC, 14) = 2.000000;
+  N_VIth(KC, 15) = 338.000000;
+  N_VIth(KC, 16) = 309.000000;
+  N_VIth(KC, 17) = 336.000000;
+  N_VIth(KC, 18) = 19.000000;
+  N_VIth(KC, 19) = 10.000000;
+  N_VIth(KC, 20) = 50.000000;
+  N_VIth(KC, 21) = 36.000000;
+  N_VIth(KC, 22) = 50.000000;
+  N_VIth(KC, 23) = 40.000000;
+  N_VIth(KC, 24) = 82.000000;
+  N_VIth(KC, 25) = 1320.000000;
+  N_VIth(KC, 26) = 809.000000;
+static void
+f(integer N, real t, N_Vector Y, N_Vector Y2, void *f_data) {
+  const double *KC = (double*)f_data;
+
+  double r0 = KC[0] * N_VIth(Y, 0);
+  double r1 = KC[1] * N_VIth(Y, 0) * N_VIth(Y, 12);
+  double r2 = KC[2] * N_VIth(Y, 2) * N_VIth(Y, 12);
+  double r3 = KC[3] * N_VIth(Y, 3);
+  double r4 = KC[4] * N_VIth(Y, 9) * N_VIth(Y, 10);
+  double r5 = KC[5] * N_VIth(Y, 11);
+  double r6 = KC[6] * N_VIth(Y, 10);
+  double r7 = KC[7] * N_VIth(Y, 5) * N_VIth(Y, 13);
+  double r8 = KC[8] * N_VIth(Y, 14);
+  double r9 = KC[9] * N_VIth(Y, 4) * N_VIth(Y, 14);
+  double r10 = KC[10] * N_VIth(Y, 7);
+  double r11 = KC[11] * N_VIth(Y, 7) * N_VIth(Y, 15);
+  double r12 = KC[12] * N_VIth(Y, 8);
+  double r13 = KC[13] * N_VIth(Y, 14);
+  double r14 = KC[14] * N_VIth(Y, 14);
+  double r15 = KC[15] * N_VIth(Y, 8);
+  double r16 = KC[16] * N_VIth(Y, 8);
+  double r17 = KC[17] * N_VIth(Y, 8);
+  double r18 = KC[18] * N_VIth(Y, 14);
+  double r19 = KC[19] * N_VIth(Y, 1);
+  double r20 = KC[20] * N_VIth(Y, 9);
+  double r21 = KC[21] * N_VIth(Y, 5);
+  double r22 = KC[22] * N_VIth(Y, 4);
+  double r23 = KC[23] * N_VIth(Y, 6);
+  double r24 = KC[24] * N_VIth(Y, 12);
+  double r25 = KC[25] * N_VIth(Y, 2) * N_VIth(Y, 6);
+  double r26 = KC[26] * N_VIth(Y, 15);
+  N_VIth(Y2, 2) = 1.000000 * r0 + 1.000000 * r1 + -1.000000 * r2;
+  N_VIth(Y2, 3) = 1.000000 * r2 + -1.000000 * r3;
+  N_VIth(Y2, 4) = -1.000000 * r9 + 1.000000 * r10 + 1.000000 * r13 + 1.000000 * r15 + -1.000000 * r22;
+  N_VIth(Y2, 5) = 1.000000 * r6 + -1.000000 * r7 + 1.000000 * r8 + -1.000000 * r21;
+  N_VIth(Y2, 6) = 1.000000 * r14 + 1.000000 * r16 + -1.000000 * r23 + -1.000000 * r25 + 1.000000 * r26;
+  N_VIth(Y2, 7) = 1.000000 * r9 + -1.000000 * r10 + -1.000000 * r11 + 1.000000 * r12;
+  N_VIth(Y2, 8) = 1.000000 * r11 + -1.000000 * r12;
+  N_VIth(Y2, 9) = 1.000000 * r3 + 1.000000 * r19 + -1.000000 * r20;
+  N_VIth(Y2, 10) = -1.000000 * r4 + 1.000000 * r5;
+  N_VIth(Y2, 11) = 1.000000 * r4 + -1.000000 * r5;
+  N_VIth(Y2, 12) = 1.000000 * r17 + 1.000000 * r18 + -1.000000 * r24;
+  N_VIth(Y2, 13) = -1.000000 * r7 + 1.000000 * r8;
+  N_VIth(Y2, 14) = 1.000000 * r7 + -1.000000 * r8 + -1.000000 * r9 + 1.000000 * r10;
+  N_VIth(Y2, 15) = 1.000000 * r25 + -1.000000 * r26;
+}
+
+static void
+Jac(integer N, DenseMat J, RhsFn f, void *f_data, real t,
+    N_Vector Y, N_Vector fy, N_Vector ewt, real h, real uround,
+    void *jac_data, long int *nfePtr, N_Vector vtemp1,
+    N_Vector vtemp2, N_Vector vtemp3) {
+  double r00 = KC[0];
+  double r10 = KC[1] * N_VIth(Y, 12);
+  double r112 = KC[1] * N_VIth(Y, 0);
+  double r22 = KC[2] * N_VIth(Y, 12);
+  double r212 = KC[2] * N_VIth(Y, 2);
+  double r33 = KC[3];
+  double r49 = KC[4] * N_VIth(Y, 10);
+  double r410 = KC[4] * N_VIth(Y, 9);
+  double r511 = KC[5];
+  double r610 = KC[6];
+  double r75 = KC[7] * N_VIth(Y, 13);
+  double r713 = KC[7] * N_VIth(Y, 5);
+  double r814 = KC[8];
+  double r94 = KC[9] * N_VIth(Y, 14);
+  double r914 = KC[9] * N_VIth(Y, 4);
+  double r107 = KC[10];
+  double r117 = KC[11] * N_VIth(Y, 15);
+  double r1115 = KC[11] * N_VIth(Y, 7);
+  double r128 = KC[12];
+  double r1314 = KC[13];
+  double r1414 = KC[14];
+  double r158 = KC[15];
+  double r168 = KC[16];
+  double r178 = KC[17];
+  double r1814 = KC[18];
+  double r191 = KC[19];
+  double r209 = KC[20];
+  double r215 = KC[21];
+  double r224 = KC[22];
+  double r236 = KC[23];
+  double r2412 = KC[24];
+  double r252 = KC[25] * N_VIth(Y, 6);
+  double r256 = KC[25] * N_VIth(Y, 2);
+  double r2615 = KC[26];
+  DENSE_ELEM(J, 2, 0) = 1.000000 * r00 + 1.000000 * r10;
+  DENSE_ELEM(J, 2, 2) = -1.000000 * r22;
+  DENSE_ELEM(J, 2, 12) = 1.000000 * r112 + -1.000000 * r212;
+  DENSE_ELEM(J, 3, 2) = 1.000000 * r22;
+  DENSE_ELEM(J, 3, 3) = -1.000000 * r33;
+  DENSE_ELEM(J, 3, 12) = 1.000000 * r212;
+  DENSE_ELEM(J, 4, 4) = -1.000000 * r94 + -1.000000 * r224;
+  DENSE_ELEM(J, 4, 7) = 1.000000 * r107;
+  DENSE_ELEM(J, 4, 8) = 1.000000 * r158;
+  DENSE_ELEM(J, 4, 14) = -1.000000 * r914 + 1.000000 * r1314;
+  DENSE_ELEM(J, 5, 5) = -1.000000 * r75 + -1.000000 * r215;
+  DENSE_ELEM(J, 5, 10) = 1.000000 * r610;
+  DENSE_ELEM(J, 5, 13) = -1.000000 * r713;
+  DENSE_ELEM(J, 5, 14) = 1.000000 * r814;
+  DENSE_ELEM(J, 6, 2) = -1.000000 * r252;
+  DENSE_ELEM(J, 6, 6) = -1.000000 * r236 + -1.000000 * r256;
+  DENSE_ELEM(J, 6, 8) = 1.000000 * r168;
+  DENSE_ELEM(J, 6, 14) = 1.000000 * r1414;
+  DENSE_ELEM(J, 6, 15) = 1.000000 * r2615;
+  DENSE_ELEM(J, 7, 4) = 1.000000 * r94;
+  DENSE_ELEM(J, 7, 7) = -1.000000 * r107 + -1.000000 * r117;
+  DENSE_ELEM(J, 7, 8) = 1.000000 * r128;
+  DENSE_ELEM(J, 7, 14) = 1.000000 * r914;
+  DENSE_ELEM(J, 7, 15) = -1.000000 * r1115;
+  DENSE_ELEM(J, 8, 7) = 1.000000 * r117;
+  DENSE_ELEM(J, 8, 8) = -1.000000 * r128;
+  DENSE_ELEM(J, 8, 15) = 1.000000 * r1115;
+  DENSE_ELEM(J, 9, 1) = 1.000000 * r191;
+  DENSE_ELEM(J, 9, 3) = 1.000000 * r33;
+  DENSE_ELEM(J, 9, 9) = -1.000000 * r209;
+  DENSE_ELEM(J, 10, 9) = -1.000000 * r49;
+  DENSE_ELEM(J, 10, 10) = -1.000000 * r410;
+  DENSE_ELEM(J, 10, 11) = 1.000000 * r511;
+  DENSE_ELEM(J, 11, 9) = 1.000000 * r49;
+  DENSE_ELEM(J, 11, 10) = 1.000000 * r410;
+  DENSE_ELEM(J, 11, 11) = -1.000000 * r511;
+  DENSE_ELEM(J, 12, 8) = 1.000000 * r178;
+  DENSE_ELEM(J, 12, 12) = -1.000000 * r2412;
+  DENSE_ELEM(J, 12, 14) = 1.000000 * r1814;
+  DENSE_ELEM(J, 13, 5) = -1.000000 * r75;
+  DENSE_ELEM(J, 13, 13) = -1.000000 * r713;
+  DENSE_ELEM(J, 13, 14) = 1.000000 * r814;
+  DENSE_ELEM(J, 14, 4) = -1.000000 * r94;
+  DENSE_ELEM(J, 14, 5) = 1.000000 * r75;
+  DENSE_ELEM(J, 14, 7) = 1.000000 * r107;
+  DENSE_ELEM(J, 14, 13) = 1.000000 * r713;
+  DENSE_ELEM(J, 14, 14) = -1.000000 * r814 + -1.000000 * r914;
+  DENSE_ELEM(J, 15, 2) = 1.000000 * r252;
+  DENSE_ELEM(J, 15, 6) = 1.000000 * r256;
+  DENSE_ELEM(J, 15, 15) = -1.000000 * r2615;
+}
+

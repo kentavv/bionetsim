@@ -1,0 +1,17 @@
+int
+f(int a) {
+  return 3+a;
+}
+
+int
+main() {
+  int b;
+  b = 4;
+  b + b;
+  1 + 2;
+  f(4);
+  f(5);
+  print << f(2+4) << "\n";
+  print << "asdf\n";
+  print << f(f(2)+4) << "\n";
+}

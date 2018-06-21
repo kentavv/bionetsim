@@ -1,0 +1,25 @@
+int
+main() {
+  int i=0;
+  int j=0;
+
+  while(i < 10) {
+    print << i << "\n";
+    i++;
+  }
+
+  while(j < 4) {
+    print << "j:" << j << "\n";
+   
+    i = 0;
+    while(i < 10) {
+      print << "  i:" << i << "\n";
+      if(j > 1) {
+        break 2;
+      }
+      //print << "after" << "\n";
+      i++;
+    }
+    j++;
+  }
+}

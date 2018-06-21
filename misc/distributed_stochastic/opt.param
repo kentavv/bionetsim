@@ -1,0 +1,22 @@
+Network file: gal4.net
+
+Client-server mode: true
+# Must be true or false
+
+#Master Address: 170.54.124.31
+Master Address: 10.56.0.4
+# The address of the machine that is responsible for dividing up work
+
+Time limit type: Timer
+# The interpretation of the time limit placed on generation - Must be None / Iteration / Timer
+# If limit type = Iteration => this is the maximum number of iterations the simplex will make
+# If limit type = Timer => this is the maximum amount of time the simplex method will take
+# If limit type = Timer && CS_Mode => this is the maximum amount of time allocated to the 
+#                                     generation including GA specific and Simplex
+
+Time limit: 180
+# The time limit in either seconds or iterations placed on the generation.
+# See "Time limit type" for more details
+
+Random seed: -1
+# -1 => generate one

@@ -1,0 +1,25 @@
+  k1 = 0.1
+  k2 = 0.1
+  k3 = 0.1
+  k4 = 0.01
+  k4r = 1
+  k5 = 1
+  k6 = 0.01
+  k6r = 1
+  k7 = 1
+  k8 = 1
+
+  Repressor1 = -4*k6*[Repressor1]^4*[gene2]+4*k6r*[gene2X]+k8*[gene1]-k3*[Repressor1]
+
+  Repressor2 = -4*k4*[gene1]*[Repressor2]^4+4*k4r*[gene1X]+k7*[gene2]-k1*[Repressor2]
+
+  Z = +k5*[gene1]-k2*[Z]
+
+  gene1 = -k4*[gene1]*[Repressor2]^4+k4r*[gene1X]-k5*[gene1]+k5*[gene1]-k8*[gene1]+k8*[gene1]
+
+  gene1X = +k4*[gene1]*[Repressor2]^4-k4r*[gene1X]
+
+  gene2 = -k6*[Repressor1]^4*[gene2]+k6r*[gene2X]-k7*[gene2]+k7*[gene2]
+
+  gene2X = +k6*[Repressor1]^4*[gene2]-k6r*[gene2X]
+

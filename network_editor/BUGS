@@ -1,0 +1,13 @@
+Need a way to specify the location of the subnetwork library.
+
+Remove non-generic fitness functions.
+
+Update to a recent Qt
+
+Update to a recent Qwt
+
+Update to a recent CVODE
+
+Gradient on molecules that degrade
+
+Fitness functions for stochastic simulations

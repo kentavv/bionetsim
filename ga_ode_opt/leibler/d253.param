@@ -1,0 +1,125 @@
+Network file: d253.net
+
+Population size: 20000
+# Must be even number if using 2pt crossover
+
+Client-server mode: true
+# Must be true or false
+
+Work-unit size: 100
+# The number of individuals sent to each client
+
+#Master Address: 170.54.124.31
+Master Address: 10.56.0.4
+# The address of the machine that is responsible for dividing up work
+
+Maximize fitness function: false
+# Must be true or false
+
+Elitism: true
+# Ensure best individual survives - Must be true / false
+
+Replace failures: true
+# Replace any individual whose fitness could not be computed
+# with a new random individual - Must be true / false
+
+Simplex size: 1
+# The number of top individuals to perform local area optimization on
+# using the simplex algorithm.  x<=0 => disable
+
+Time limit type: Timer
+# The interpretation of the time limit placed on generation - Must be None / Iteration / Timer
+# If limit type = Iteration => this is the maximum number of iterations the simplex will make
+# If limit type = Timer => this is the maximum amount of time the simplex method will take
+# If limit type = Timer && CS_Mode => this is the maximum amount of time allocated to the 
+#                                     generation including GA specific and Simplex
+
+Time limit: 60
+# The time limit in either seconds or iterations placed on the generation.
+# See "Time limit type" for more details
+
+Number of generations: 50
+# -1 => never end
+
+Selection pressure: 0.2
+
+Crossover type: NPt
+# Options are None, NPt, TwoPt
+
+Shift mutation range: 0.05
+# Shift values by +- 5%
+
+Save best interval: 1
+Save best prefix: best
+Print population interval: 0
+Print population stats interval: 1
+
+Population identity check interval: 1
+Population identity limit: 0.50
+
+Random seed: -1
+# -1 => generate one
+
+Integer parameters: false
+Parameter ranges:
+# Fields _MUST_ be separated by tabs
+# Original model
+#    0	LacI                	LacI --> 0                                                                      	0.010000
+#    1	TetR                	TetR --> 0                                                                      	0.010000
+#    2	lambda cI           	lambda cI --> 0                                                                 	0.010000
+#    3	GFP                 	GFP --> 0                                                                       	1.000000
+#    4	LacIX               	LacIX --> 0                                                                     	0.000000
+#    5	TetRX               	TetRX --> 0                                                                     	0.000000
+#    6	T1                  	LacIg --> LacIg + LacI                                                          	1.000000
+#    7	T2                  	TetRg --> TetRg + TetR                                                          	1.000000
+#    8/9	PL+                 	(lambda cIg) + 2(lambda cI) <-> (lambda cIgX)                                   	1.000000
+#   10	T3                  	(lambda cIg) --> (lambda cIg) + (lambda cI)                                     	1.000000
+#   11/12	PL-a                	GFPg + 2(lambda cI) <-> GFPgX                                                   	1.000000
+#   13	T4                  	GFPg --> GFPg + GFP                                                             	10.000000
+#   14/15	PT                  	TetRg + 2TetR <-> TetRgX                                                        	1.000000
+#   16/17	PL1                 	LacIg + 4LacI <-> LacIgX                                                        	1.000000
+#   18/19	R1                  	IPTG + LacI <-> LacIX                                                           	1.000000
+#   20/21	R2                  	aTc + TetR <-> TetRX                                                            	1.000000
+# Reactions
+# RxnName	Index into param table	Rxn Equation	Kinetic value
+LacI	0		# LacI --> 0                                                  	0.010000
+TetR	1		# TetR --> 0                                                  	0.010000
+lambda cI	2		# lambda cI --> 0                                             	0.010000
+GFP	3		# GFP --> 0                                                   	1.000000
+LacIX	4		# LacIX --> 0                                                 	0.000000
+TetRX	5		# TetRX --> 0                                                 	0.000000
+T1	6		# LacIg --> LacIg + LacI                                      	1.000000
+T2	7		# TetRg --> TetRg + TetR                                      	1.000000
+PL+	8	9	# (lambda cIg) + 2(lambda cI) <-> (lambda cIgX)               	1.000000
+T3	10		# (lambda cIg) --> (lambda cIg) + (lambda cI)                 	1.000000
+PL-a	11	12	# GFPg + 2(lambda cI) <-> GFPgX                               	1.000000
+T4	13		# GFPg --> GFPg + GFP                                         	10.000000
+PT	14	15	# TetRg + 2TetR <-> TetRgX                                    	1.000000
+PL1	16	17	# LacIg + 4LacI <-> LacIgX                                    	1.000000
+R1	18	19	# IPTG + LacI <-> LacIX                                       	1.000000
+R2	20	21	# aTc + TetR <-> TetRX                                        	1.000000
+# Parameters
+# Param Index	Min	Max			-or-
+# Param Index	Fixed Value
+0	0.000000	1000000.000000	# 0.010000
+1	0.000000	1000000.000000	# 0.010000
+2	0.000000	1000000.000000	# 0.010000
+3	0.000000	1000000.000000	# 1.000000
+4	0.000000	1000000.000000	# 0.000000
+5	0.000000	1000000.000000	# 0.000000
+6	0.000000	1000000.000000	# 1.000000
+7	0.000000	1000000.000000	# 1.000000
+8	0.000000	1000000.000000	# 1.000000
+9	0.000000	1000000.000000	# 1.000000
+10	0.000000	1000000.000000	# 1.000000
+11	0.000000	1000000.000000	# 10.000000
+12	0.000000	1000000.000000	# 1.000000
+13	0.000000	1000000.000000	# 10.000000
+14	0.000000	1000000.000000	# 1.000000
+15	0.000000	1000000.000000	# 1.000000
+16	0.000000	1000000.000000	# 1.000000
+17	0.000000	1000000.000000	# 1.000000
+18	0.000000	1000000.000000	# 1.000000
+19	0.000000	1000000.000000	# 1.000000
+20	0.000000	1000000.000000	# 1.000000
+21	0.000000	1000000.000000	# 1.000000

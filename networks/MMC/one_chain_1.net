@@ -1,0 +1,187 @@
+<?xml version="1.0" standalone="yes"?>
+<Network>
+ <Info>
+  <Program>Network Editor 0.07 devel</Program>
+  <Format>21</Format>
+  <SaveDateTime>Mon Dec 20 16:15:16 2004</SaveDateTime>
+  <Version>3</Version>
+ </Info>
+ <Editor>
+  <GridSpacing>16 16</GridSpacing>
+  <SnapToGrid/>
+  <Grid display="false" />
+  <Labels display="true" />
+  <Icons display="true" />
+ </Editor>
+ <Fitness>
+  <Function>Null</Function>
+ </Fitness>
+ <Simulation>
+  <SimulationMethod>ODE</SimulationMethod>
+  <TimeBegin>0</TimeBegin>
+  <TimeEnd>200</TimeEnd>
+  <TimeStepSize>10</TimeStepSize>
+  <SteadyStateTolerance>1e-006</SteadyStateTolerance>
+  <AbsoluteTolerance>1e-008</AbsoluteTolerance>
+  <RelativeTolerance>0.0001</RelativeTolerance>
+  <MaxStep>1</MaxStep>
+  <MinStep>0</MinStep>
+  <Environments>
+   <Environment current="true" >Environment 1</Environment>
+  </Environments>
+  <NumReplicates>20</NumReplicates>
+  <HistogramUpdateRate>-1</HistogramUpdateRate>
+ </Simulation>
+ <Molecules>
+  <MetaboliteMolecule>
+   <Label>A</Label>
+   <Id>1</Id>
+   <Pos>416 192</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </MetaboliteMolecule>
+  <MetaboliteMolecule>
+   <Label>B</Label>
+   <Id>2</Id>
+   <Pos>640 192</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </MetaboliteMolecule>
+  <MetaboliteMolecule>
+   <Label>C</Label>
+   <Id>3</Id>
+   <Pos>848 192</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </MetaboliteMolecule>
+  <MetaboliteMolecule>
+   <Label>D</Label>
+   <Id>4</Id>
+   <Pos>1088 192</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0.1</DecayRate>
+   <Decays/>
+  </MetaboliteMolecule>
+  <SquareWaveControlVariable>
+   <Label>CV 1</Label>
+   <Id>14</Id>
+   <Pos>208 192</Pos>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <Parameters>
+    <Number>0</Number>
+    <Values>0 1</Values>
+    <Duration>200 1</Duration>
+    <TransitionTime>20 20</TransitionTime>
+    <PhaseShift>-175</PhaseShift>
+   </Parameters>
+   <NotPlotted/>
+  </SquareWaveControlVariable>
+ </Molecules>
+ <Subnetworks/>
+ <Reactions>
+  <MassActionReaction>
+   <Label>R02</Label>
+   <Id>5</Id>
+   <Pos>528 192</Pos>
+   <Kf>0.01</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>8</Id>
+     <Reactant>
+      <Label>A</Label>
+      <Id>1</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>9</Id>
+     <Product>
+      <Label>B</Label>
+      <Id>2</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>R03</Label>
+   <Id>6</Id>
+   <Pos>752 192</Pos>
+   <Kf>0.01</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>10</Id>
+     <Reactant>
+      <Label>B</Label>
+      <Id>2</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>11</Id>
+     <Product>
+      <Label>C</Label>
+      <Id>3</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>R04</Label>
+   <Id>7</Id>
+   <Pos>960 192</Pos>
+   <Kf>0.01</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>12</Id>
+     <Reactant>
+      <Label>C</Label>
+      <Id>3</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>13</Id>
+     <Product>
+      <Label>D</Label>
+      <Id>4</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>R01</Label>
+   <Id>15</Id>
+   <Pos>304 192</Pos>
+   <Kf>10</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>16</Id>
+     <Reactant>
+      <Label>CV 1</Label>
+      <Id>14</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>17</Id>
+     <Product>
+      <Label>A</Label>
+      <Id>1</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+ </Reactions>
+</Network>

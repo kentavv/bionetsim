@@ -1,0 +1,10 @@
+int
+main() {
+  int i = 1;
+  float f = 2.0;
+
+  i = f;
+
+  print << i << "\t" << f << "\n";
+}
+

@@ -1,0 +1,8 @@
+int
+main() {
+  for(int i=0; i<10; i++) {
+    print << i << "\n";
+  }
+  print << "outside for(): " << i << "\n";
+  print << j << "\n";
+}

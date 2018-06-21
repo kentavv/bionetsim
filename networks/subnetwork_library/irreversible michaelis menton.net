@@ -1,0 +1,147 @@
+<?xml version="1.0" standalone="yes"?>
+<Network>
+ <Info>
+  <Program>Network Editor 0.07 devel</Program>
+  <Format>19</Format>
+  <SaveDateTime>Mon Oct 13 13:58:07 2003</SaveDateTime>
+  <Version>8</Version>
+ </Info>
+ <Editor>
+  <GridSpacing>20 20</GridSpacing>
+  <SnapToGrid/>
+  <DrawLabel/>
+  <DrawIcon/>
+ </Editor>
+ <Fitness>
+  <Function>Null</Function>
+ </Fitness>
+ <Simulation>
+  <SimulationMethod>ODE</SimulationMethod>
+  <TimeBegin>0</TimeBegin>
+  <TimeEnd>160</TimeEnd>
+  <TimeStepSize>0.1</TimeStepSize>
+  <SteadyStateTolerance>1e-06</SteadyStateTolerance>
+  <AbsoluteTolerance>1e-08</AbsoluteTolerance>
+  <RelativeTolerance>0.0001</RelativeTolerance>
+  <MaxStep>1</MaxStep>
+  <MinStep>0</MinStep>
+  <Environments>
+   <Environment current="true" >Environment 1</Environment>
+  </Environments>
+  <NumReplicates>20</NumReplicates>
+  <HistogramUpdateRate>-1</HistogramUpdateRate>
+ </Simulation>
+ <Molecules>
+  <MetaboliteMolecule>
+   <Label>E</Label>
+   <Id>1</Id>
+   <Pos>52 27</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+   <Exported/>
+  </MetaboliteMolecule>
+  <MetaboliteMolecule>
+   <Label>S</Label>
+   <Id>2</Id>
+   <Pos>52 107</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+   <Exported/>
+  </MetaboliteMolecule>
+  <ComplexMolecule>
+   <Label>ES</Label>
+   <Id>3</Id>
+   <Pos>232 67</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </ComplexMolecule>
+  <MetaboliteMolecule>
+   <Label>P</Label>
+   <Id>4</Id>
+   <Pos>412 67</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+   <Exported/>
+  </MetaboliteMolecule>
+ </Molecules>
+ <Subnetworks/>
+ <Reactions>
+  <MassActionReaction>
+   <Label>R2</Label>
+   <Id>9</Id>
+   <Pos>332 67</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>5</Id>
+     <Reactant>
+      <Label>ES</Label>
+      <Id>3</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>6</Id>
+     <Product>
+      <Label>E</Label>
+      <Id>1</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+     <InternalNodes>
+      <InternalNode>
+       <Id>7</Id>
+       <Pos>332 27</Pos>
+      </InternalNode>
+     </InternalNodes>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>8</Id>
+     <Product>
+      <Label>P</Label>
+      <Id>4</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>R1</Label>
+   <Id>13</Id>
+   <Pos>132 67</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Reversible/>
+   <Edges>
+    <ReactionEdge>
+     <Id>10</Id>
+     <Reactant>
+      <Label>E</Label>
+      <Id>1</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>11</Id>
+     <Reactant>
+      <Label>S</Label>
+      <Id>2</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>12</Id>
+     <Product>
+      <Label>ES</Label>
+      <Id>3</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+ </Reactions>
+</Network>

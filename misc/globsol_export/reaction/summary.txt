@@ -1,0 +1,4 @@
+ Best verified function value:  0.000000000000000E+000
+ Total number of output boxes:           1
+ Total CPU time:   286.052734000000     
+ Return code:           0

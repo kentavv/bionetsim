@@ -1,0 +1,116 @@
+<?xml version="1.0" standalone="yes"?>
+<Network>
+ <Info>
+  <Program>Network Editor 0.07 devel</Program>
+  <Format>25</Format>
+  <SaveDateTime>Mon Mar 17 15:06:09 2008</SaveDateTime>
+  <Version>29</Version>
+ </Info>
+ <Editor>
+  <GridSpacing>16 16</GridSpacing>
+  <SnapToGrid/>
+  <Grid display="false" />
+ </Editor>
+ <Fitness>
+  <Function>Script</Function>
+  <Script>int 
+main() {
+  int i = 0;
+  int n = 5;
+  float res[5];
+  float target[5];
+
+  target[0] = .5;
+  target[1] = .5;
+  target[2] = .5;
+  target[3] = .5;
+  target[4] = .5;
+
+  for(i=1; i&lt;=n; i++) {
+    kc(&quot;Rxn 1&quot;) = i/5.0;
+    if(simulate()) {
+      print &lt;&lt; &quot;Simluation successful\n&quot;;
+    } else {
+      print &lt;&lt; &quot;Simulation failed\n&quot;;
+    }
+    res[i-1] = result(&quot;Mol 1&quot;, 100);
+  }
+
+  for(i=1; i&lt;=n; i++) {
+    print &lt;&lt; res[i-1] &lt;&lt; &quot;\n&quot;;
+  }
+
+  fitness = 0;
+  for(i=1; i&lt;=n; i++) {
+    fitness = fitness + sqr(target[i-1] - res[i-1]);
+  }
+
+  fitness = sqrt(fitness);
+  objective = 0;
+}
+</Script>
+ </Fitness>
+ <Simulation>
+  <SimulationMethod>ODE</SimulationMethod>
+  <TimeBegin>0</TimeBegin>
+  <TimeEnd>160</TimeEnd>
+  <TimeStepSize>0.1</TimeStepSize>
+  <SteadyStateTolerance>1e-06</SteadyStateTolerance>
+  <AbsoluteTolerance>1e-08</AbsoluteTolerance>
+  <RelativeTolerance>0.0001</RelativeTolerance>
+  <MaxStep>1</MaxStep>
+  <MinStep>0</MinStep>
+  <RemoteCPU>127.0.0.1</RemoteCPU>
+  <Environments>
+   <Environment current="true" >Environment 1</Environment>
+  </Environments>
+  <NumReplicates>20</NumReplicates>
+  <HistogramUpdateRate>-1</HistogramUpdateRate>
+ </Simulation>
+ <Molecules>
+  <DNAMolecule>
+   <Label>Mol 1</Label>
+   <Id>1</Id>
+   <Pos>176 288</Pos>
+   <InitialConcentration>1</InitialConcentration>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <DNAMolecule>
+   <Label>Mol 2</Label>
+   <Id>2</Id>
+   <Pos>432 288</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DecayRate>0</DecayRate>
+   <NotInitialized/>
+  </DNAMolecule>
+ </Molecules>
+ <Subnetworks/>
+ <Reactions>
+  <MassActionReaction>
+   <Label>Rxn 1</Label>
+   <Id>5</Id>
+   <Pos>304 288</Pos>
+   <Kf>1</Kf>
+   <Kr>0.2</Kr>
+   <Reversible/>
+   <Edges>
+    <ReactionEdge>
+     <Id>3</Id>
+     <Reactant>
+      <Label>Mol 1</Label>
+      <Id>1</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>4</Id>
+     <Product>
+      <Label>Mol 2</Label>
+      <Id>2</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+ </Reactions>
+</Network>

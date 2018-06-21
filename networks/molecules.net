@@ -1,0 +1,142 @@
+<?xml version="1.0" standalone="yes"?>
+<Network>
+ <Info>
+  <Program>Network Editor 0.07 devel</Program>
+  <Format>21</Format>
+  <SaveDateTime>Sun Feb 1 14:15:35 2004</SaveDateTime>
+  <Version>21</Version>
+ </Info>
+ <Editor>
+  <GridSpacing>20 20</GridSpacing>
+  <SnapToGrid/>
+  <Grid display="false" />
+  <Labels display="true" />
+  <Icons display="true" />
+ </Editor>
+ <Fitness>
+  <Function>Null</Function>
+ </Fitness>
+ <Simulation>
+  <SimulationMethod>ODE</SimulationMethod>
+  <TimeBegin>0</TimeBegin>
+  <TimeEnd>160</TimeEnd>
+  <TimeStepSize>0.1</TimeStepSize>
+  <SteadyStateTolerance>1e-06</SteadyStateTolerance>
+  <AbsoluteTolerance>1e-08</AbsoluteTolerance>
+  <RelativeTolerance>0.0001</RelativeTolerance>
+  <MaxStep>1</MaxStep>
+  <MinStep>0</MinStep>
+  <Environments>
+   <Environment current="true" >Environment 1</Environment>
+  </Environments>
+  <NumReplicates>20</NumReplicates>
+  <HistogramUpdateRate>-1</HistogramUpdateRate>
+ </Simulation>
+ <Molecules>
+  <DNAMolecule>
+   <Label>DNA</Label>
+   <Id>1</Id>
+   <Pos>140 40</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <EnzymeMolecule>
+   <Label>Enzyme</Label>
+   <Id>2</Id>
+   <Pos>140 120</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </EnzymeMolecule>
+  <MetaboliteMolecule>
+   <Label>Metabolite</Label>
+   <Id>3</Id>
+   <Pos>140 160</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </MetaboliteMolecule>
+  <TranscriptionFactorMolecule>
+   <Label>Transcription Factor</Label>
+   <Id>4</Id>
+   <Pos>140 240</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </TranscriptionFactorMolecule>
+  <ComplexMolecule>
+   <Label>Complex</Label>
+   <Id>5</Id>
+   <Pos>140 280</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </ComplexMolecule>
+  <SquareWaveControlVariable>
+   <Label>Squarewave Control Variable</Label>
+   <Id>6</Id>
+   <Pos>420 240</Pos>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <Parameters>
+    <Number>0</Number>
+    <Values>0 1</Values>
+    <Duration>10 10</Duration>
+    <TransitionTime>2 2</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+  </SquareWaveControlVariable>
+  <mRNAMolecule>
+   <Label>mRNA</Label>
+   <Id>7</Id>
+   <Pos>140 80</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </mRNAMolecule>
+  <Annotation>
+   <Label>Annotation</Label>
+   <Id>8</Id>
+   <Pos>420 280</Pos>
+  </Annotation>
+  <InterpolatedControlVariable>
+   <Label>Interpolated Control Variable</Label>
+   <Id>10</Id>
+   <Pos>420 200</Pos>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <Parameters>
+    <Values>
+     <Matrix nrows="4" ncolumns="2" >
+      <r>
+       <c>10</c>
+       <c>1</c>
+      </r>
+      <r>
+       <c>20</c>
+       <c>5</c>
+      </r>
+      <r>
+       <c>40</c>
+       <c>30</c>
+      </r>
+      <r>
+       <c>60</c>
+       <c>80</c>
+      </r>
+     </Matrix>
+    </Values>
+   </Parameters>
+  </InterpolatedControlVariable>
+ </Molecules>
+ <Subnetworks/>
+ <Reactions>
+  <MassActionReaction>
+   <Label>Mass Action Reaction</Label>
+   <Id>9</Id>
+   <Pos>420 160</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Edges/>
+  </MassActionReaction>
+ </Reactions>
+</Network>

@@ -1,0 +1,8 @@
+Graph G005 {
+  A [shape=circle];
+  B [shape=circle];
+  C [shape=circle];
+  A -- B;
+  A -- C;
+  B -- C;
+}

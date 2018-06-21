@@ -1,0 +1,181 @@
+ Output from FIND_GLOBAL_MIN on  12/21/2004  at  13:56:07.
+ Version for the system is: November 22, 2003
+ 
+ Codelist file name is: RepressG.CDL
+ Box data file name is: Repress.DT2                   
+ 
+ 
+ Initial box:
+ [    0.0000D+00,   0.1000D+07 ] [    0.0000D+00,   0.1100D+01 ]
+ [    0.0000D+00,   0.1000D+07 ] [    0.0000D+00,   0.1000D+07 ]
+ [    0.0000D+00,   0.1100D+01 ] [    0.0000D+00,   0.1000D+07 ]
+ [    0.0000D+00,   0.1100D+01 ] [    0.0000D+00,   0.1000D+07 ]
+ [    0.0000D+00,   0.1000D+07 ] [    0.0000D+00,   0.1100D+01 ]
+ [    0.0000D+00,   0.1000D+07 ]
+ 
+ BOUND_CONSTRAINT:
+   F F   F F   F F   F F   F F   F F   F F   F F   F F   F F
+   F F
+ 
+ ---------------------------------------
+ CONFIGURATION VALUES:
+ 
+ EPS_DOMAIN:   0.1000D-09   MAXITR:  100000
+ MAX_CPU_SECONDS:    0.3600D+04
+ DO_INTERVAL_NEWTON: T  QUADRATIC: T  FULL_SPACE: F
+ VERY_GOOD_INITIAL_GUESS: F
+ USE_SUBSIT: T
+ OUTPUT UNIT:           7  PRINT_LENGTH:           1
+ PHI_MUST_CONVERGE: T
+ EQ_CNS_MUST_CONVERGE: T
+ INEQ_CNS_MUST_CONVERGE: T
+ PHI_THICKNESS_FACTOR:   0.5000D+00
+ EQ_CNS_THICKNESS_FACTOR:   0.5000D+00
+ INEQ_CNS_THICKNESS_FACTOR:   0.5000D+00
+ PHI_MUST_CONVERGE: T
+ EQ_CNS_MUST_CONVERGE: T
+ INEQ_CNS_MUST_CONVERGE: T
+ PHI_CONVERGENCE_FACTOR:   0.1000D-13
+ EQ_CNS_CONVERGENCE_FACTOR:   0.1000D-13
+ INEQ_CNS_CONVERGENCE_FACTOR:   0.1000D-13
+ CONTINUITY_ACROSS_BRANCHES: F
+ SINGULAR_EXPANSION_FACTOR:   0.1000D+02
+ HEURISTIC PARAMETER ALPHA:   0.5000D+00
+ APPROX_OPT_BEFORE_BISECTION: F
+ USE_TAYLOR_EQUALITY_CONSTRAINTS F
+ USE_TAYLOR_INEQ_CONSTRAINTS F
+ USE_TAYLOR_OBJECTIVE F
+ USE_TAYLOR_EQ_CNS_GRD F
+ USE_TAYLOR_GRAD F
+ USE_TAYLOR_INEQ_CNS_GRD F
+ USE_TAYLOR_REDUCED_INEWTON F
+ COSY_POLYNOMIAL_ORDER           5
+ LEAST_SQUARES_FUNCTIONS: F
+ NONLINEAR_SYSTEM: T
+ Default point optimizer was used. 
+ Success in initial location of an approximate optimum
+ feasible_region returned:
+ [    0.9667D+02,   0.9667D+02 ] [    0.9667D-01,   0.9667D-01 ]
+ [    0.9667D+00,   0.9667D+00 ] [    0.9667D+02,   0.9667D+02 ]
+ [    0.9667D-01,   0.9667D-01 ] [    0.9667D+02,   0.9667D+02 ]
+ [    0.9667D-01,   0.9667D-01 ] [    0.9667D+00,   0.9667D+00 ]
+ [    0.9667D+02,   0.9667D+02 ] [    0.9667D-01,   0.9667D-01 ]
+ [    0.9667D+00,   0.9667D+00 ]
+ after the interval Newton method, APPROX_OPT_BOX
+ Box coordinates:
+ [    0.9666D+02,   0.9668D+02 ] [    0.9657D-01,   0.9677D-01 ]
+ [    0.9666D+00,   0.9668D+00 ] [    0.9666D+02,   0.9668D+02 ]
+ [    0.9657D-01,   0.9677D-01 ] [    0.9666D+02,   0.9668D+02 ]
+ [    0.9657D-01,   0.9677D-01 ] [    0.9666D+00,   0.9668D+00 ]
+ [    0.9666D+02,   0.9668D+02 ] [    0.9657D-01,   0.9677D-01 ]
+ [    0.9666D+00,   0.9668D+00 ]
+PHI:
+ [    0.0000D+00,   0.5105D+00 ]
+ B%LIUI(1,*):
+ F F F F F F F F F F F
+ B%LIUI(2,*):
+ F F F F F F F F F F F
+ B%SIDE(*):
+ F F F F F F F F F F F
+ B%PEEL(*):
+ F F F F F F F F F F F
+ Level:            0
+ Box contains the following approximate root:
+    0.9667D+02   0.9667D-01   0.9667D+00   0.9667D+02
+    0.9667D-01   0.9667D+02   0.9667D-01   0.9667D+00
+    0.9667D+02   0.9667D-01   0.9667D+00
+ OBJECTIVE ENCLOSURE AT APPROXIMATE ROOT:
+ [    0.5444D-20,   0.5820D-20 ]
+ Unknown =  T    Contains_root = T
+ Changed coordinates:
+ F F F F F F F F F F F
+ U0:
+ [    0.0000D+00,   0.1000D+01 ]
+ V:
+ [   -0.1000D+01,   0.1000D+01 ] [   -0.1000D+01,   0.1000D+01 ]
+ [   -0.1000D+01,   0.1000D+01 ] [   -0.1000D+01,   0.1000D+01 ]
+ [   -0.1000D+01,   0.1000D+01 ] [   -0.1000D+01,   0.1000D+01 ]
+ [   -0.1000D+01,   0.1000D+01 ] [   -0.1000D+01,   0.1000D+01 ]
+ [   -0.1000D+01,   0.1000D+01 ] [   -0.1000D+01,   0.1000D+01 ]
+ [   -0.1000D+01,   0.1000D+01 ]
+ After PEEL_BOUNDARY, number of boxes in current_list:           1
+ After COMPLEMENT_LIST, number of boxes in current_list:          16
+ 
+ THERE WERE NO BOXES IN THE LIST OF SMALL BOXES.
+ 
+ LIST OF BOXES CONTAINING VERIFIED FEASIBLE POINTS:
+ 
+ Box no.:           1
+ Box coordinates:
+ [    0.9666D+02,   0.9668D+02 ] [    0.9657D-01,   0.9677D-01 ]
+ [    0.9666D+00,   0.9668D+00 ] [    0.9666D+02,   0.9668D+02 ]
+ [    0.9657D-01,   0.9677D-01 ] [    0.9666D+02,   0.9668D+02 ]
+ [    0.9657D-01,   0.9677D-01 ] [    0.9666D+00,   0.9668D+00 ]
+ [    0.9666D+02,   0.9668D+02 ] [    0.9657D-01,   0.9677D-01 ]
+ [    0.9666D+00,   0.9668D+00 ]
+PHI:
+ [    0.0000D+00,   0.5105D+00 ]
+ B%LIUI(1,*):
+ F F F F F F F F F F F
+ B%LIUI(2,*):
+ F F F F F F F F F F F
+ B%SIDE(*):
+ F F F F F F F F F F F
+ B%PEEL(*):
+ F F F F F F F F F F F
+ Level:            0
+ Box contains the following approximate root:
+    0.9667D+02   0.9667D-01   0.9667D+00   0.9667D+02
+    0.9667D-01   0.9667D+02   0.9667D-01   0.9667D+00
+    0.9667D+02   0.9667D-01   0.9667D+00
+ OBJECTIVE ENCLOSURE AT APPROXIMATE ROOT:
+ [    0.5444D-20,   0.5820D-20 ]
+ Unknown =  T    Contains_root = T
+ Changed coordinates:
+ F F F F F F F F F F F
+ U0:
+ [    0.0000D+00,   0.1000D+01 ]
+ V:
+ [   -0.1000D+01,   0.1000D+01 ] [   -0.1000D+01,   0.1000D+01 ]
+ [   -0.1000D+01,   0.1000D+01 ] [   -0.1000D+01,   0.1000D+01 ]
+ [   -0.1000D+01,   0.1000D+01 ] [   -0.1000D+01,   0.1000D+01 ]
+ [   -0.1000D+01,   0.1000D+01 ] [   -0.1000D+01,   0.1000D+01 ]
+ [   -0.1000D+01,   0.1000D+01 ] [   -0.1000D+01,   0.1000D+01 ]
+ [   -0.1000D+01,   0.1000D+01 ]
+ -------------------------------------------------
+ ALGORITHM COMPLETED WITH LESS THAN THE MAXIMUM NUMBER,
+      100000  OF BOXES.
+ Number of bisections:        30623
+ No. dense interval residual evaluations -- gradient code list:       346130
+ Number of orig. system inverse midpoint preconditioner rows:           11
+ Number of orig. system C-LP preconditioner rows:      1085586
+ Number of solutions for a component in the expanded system:     46999975
+ Total number of forward_substitutions:      1947864
+ Number of Gauss--Seidel steps on the dense system:      1085597
+ Number of gradient evaluations from a gradient code list:        91425
+ Total number of dense slope matrix evaluations:        61270
+ Total number second-order interval evaluations of the
+       original function:        61270
+ Total number dense interval constraint evaluations:      5241170
+ Total number dense interval constraint gradient component
+       evaluations:     27000545
+ Total number dense point constraint gradient component
+       evaluations:         1452
+ Number of times a box was rejected in the interval Newton
+       method due to an empty intersection:         5159
+ Number of times the interval Newton method made a coordinate
+       interval smaller:       179377
+ Number of times a box was rejected because of a large lower
+       bound on the objective function:          911
+ Total time spent doing linear algebra (preconditioners
+       and solution processes):    63.2402409999982     
+ Number of times MAXIT was exceeded in C_LP_DENSE:          703
+ Number of times the approximate solver was called:            1
+ Number of times SUBSIT decreased one or more 
+       coordinate widths:        36376
+ Number of times SUBSIT rejected a box:        24109
+ Total number of boxes processed in loop:        60802
+ BEST_ESTIMATE:    0.0000D+00
+ Overall CPU time:    0.2861D+03
+ CPU time in PEEL_BOUNDARY:    0.0000D+00
+ CPU time in REDUCED_INTERVAL_NEWTON:    0.7139D+02

@@ -1,0 +1,21 @@
+int
+main() {
+  int a = 9;
+  int b = 3;
+  print << "hello\n";
+  print << "123" << "asdf" << "\n";
+  print << a << "\n";
+  print << a*a << "\n";
+  print << a++ << "\n";
+  print << a++ << "\n";
+  print << a << "\n";
+  print << a << "\t" << b << "\n";
+  print << a++ + b++ << "\n";
+  print << a << "\t" << b << "\n";
+  print << a + b << "\n";
+  print << a << "\t" << b << "\n";
+  print << (a + a++) << "\n";
+  print << a << "\t" << b << "\n";
+  print << ++a + ++b << "\n";
+  print << a << "\t" << b << "\n";
+}

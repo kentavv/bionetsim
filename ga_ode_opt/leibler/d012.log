@@ -1,0 +1,173 @@
+nmol:16 nrxn:22
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+11
+12
+16
+17
+18
+19
+=======
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+11
+12
+16
+17
+18
+19
+-------
+pr.nrows(): 20
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+Network file: d012.net
+Population size: 200
+Client-server mode: true
+Work-unit size: 100
+Master: 10.56.0.4
+Number of generations: 100
+Selection pressure: 0.200000
+Crossover type: NPt
+Maximize fitness function: false
+Elitism: true
+Replace failures: true
+Simplex size: 1
+Shift mutation range: 0.050000
+Save best interval: 1
+Save best prefix: best
+Print population interval: 0
+Print population stats interval: 1
+Population identity check interval: 1
+Population identity limit: 0.500000
+Random seed: 4294967295
+Integer parameters: false
+Parameter ranges:
+LacI	0	0.000000	1000000.000000			# LacI --> 0                                                  	0.010000
+TetR	1	0.000000	1000000.000000			# TetR --> 0                                                  	0.010000
+lambda cI	2	0.000000	1000000.000000			# lambda cI --> 0                                             	0.010000
+GFP	3	0.000000	1000000.000000			# GFP --> 0                                                   	1.000000
+LacIX	4	0.000000	1000000.000000			# LacIX --> 0                                                 	0.000000
+TetRX	5	0.000000	1000000.000000			# TetRX --> 0                                                 	0.000000
+T1	6	0.000000	1000000.000000				# LacIg --> LacIg + LacI                                      	Kf:1.000000
+T2	7	0.000000	1000000.000000				# TetRg --> TetRg + TetR                                      	Kf:1.000000
+PL1	8	0.000000	1000000.000000	9	0.000000	1000000.000000	# (lambda cIg) + 4LacI <-> (lambda cIgX)                      	Kf:1.000000	Kr:1.000000
+T3	10	0.000000	1000000.000000				# (lambda cIg) --> (lambda cIg) + (lambda cI)                 	Kf:1.000000
+PL-a	11	0.000000	1000000.000000	12	0.000000	1000000.000000	# GFPg + 2(lambda cI) <-> GFPgX                               	Kf:10.000000	Kr:1.000000
+T4	13	0.000000	1000000.000000				# GFPg --> GFPg + GFP                                         	Kf:10.000000
+PT	14	0.000000	1000000.000000	15	0.000000	1000000.000000	# TetRg + 2TetR <-> TetRgX                                    	Kf:1.000000	Kr:1.000000
+PL-b	11	0.000000	1000000.000000	12	0.000000	1000000.000000	# LacIg + 2(lambda cI) <-> LacIgX                             	Kf:1.000000	Kr:1.000000
+R1	16	0.000000	1000000.000000	17	0.000000	1000000.000000	# IPTG + LacI <-> LacIX                                       	Kf:1.000000	Kr:1.000000
+R2	18	0.000000	1000000.000000	19	0.000000	1000000.000000	# aTc + TetR <-> TetRX                                        	Kf:1.000000	Kr:1.000000
+kc2param_map:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+11
+12
+16
+17
+18
+19
+param_ranges:
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+0	1e+06
+pem.kc:
+0.01
+0.01
+0.01
+1
+0
+0
+1
+1
+1
+1
+1
+10
+1
+10
+1
+1
+1
+1
+1
+1
+1
+1

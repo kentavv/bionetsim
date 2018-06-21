@@ -1,0 +1,11 @@
+int
+main() {
+  int a = int(9.0);
+  float b = 3./4;
+  string s = string(a == int(b));
+
+  print << a << "\t" << b << "\n";
+  print << (a == int(b)) << "\n";
+  print << s << "\n";
+  print << s + "hello" << "\n";
+}

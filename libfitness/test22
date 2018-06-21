@@ -1,0 +1,14 @@
+void
+func1(int a) {
+  a+2;
+  func2(a+1);
+}
+void
+func2(int b) {
+  b;
+}
+int
+main() {
+  func1(1);
+}
+

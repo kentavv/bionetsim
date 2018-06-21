@@ -1,0 +1,10 @@
+int
+main() {
+  int a = 9;
+  int b = 3;
+  print << a << "\n";
+  print << a+=2 << "\n";
+  print << a << "\n";
+  a+=2;
+  print << a << "\n";
+}

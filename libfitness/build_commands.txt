@@ -1,0 +1,2 @@
+bison -p FF FF.y -o FF_yacc.cpp
+flex -P FF --nounistd -o FF_lex.cpp FF.l

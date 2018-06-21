@@ -1,0 +1,175 @@
+<?xml version="1.0" standalone="yes"?>
+<Network>
+ <Info>
+  <Program>Network Editor 0.07 devel</Program>
+  <Format>19</Format>
+  <SaveDateTime>Mon Oct 13 13:57:51 2003</SaveDateTime>
+  <Version>23</Version>
+ </Info>
+ <Editor>
+  <GridSpacing>5 5</GridSpacing>
+  <SnapToGrid/>
+  <DrawLabel/>
+  <DrawIcon/>
+ </Editor>
+ <Fitness>
+  <Function>Null</Function>
+ </Fitness>
+ <Simulation>
+  <SimulationMethod>ODE</SimulationMethod>
+  <TimeBegin>0</TimeBegin>
+  <TimeEnd>2</TimeEnd>
+  <TimeStepSize>0.1</TimeStepSize>
+  <SteadyStateTolerance>1e-06</SteadyStateTolerance>
+  <AbsoluteTolerance>1e-08</AbsoluteTolerance>
+  <RelativeTolerance>0.0001</RelativeTolerance>
+  <MaxStep>1</MaxStep>
+  <MinStep>0</MinStep>
+  <Environments>
+   <Environment current="true" >Environment 1</Environment>
+   <Environment>Environment 2</Environment>
+   <Environment>Environment 3</Environment>
+   <Environment>Environment 4</Environment>
+  </Environments>
+  <NumReplicates>20</NumReplicates>
+  <HistogramUpdateRate>-1</HistogramUpdateRate>
+ </Simulation>
+ <Molecules>
+  <DNAMolecule>
+   <Label>Dimer</Label>
+   <Id>1</Id>
+   <Pos>318 27</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <DNAMolecule>
+   <Label>Correct Tetramer</Label>
+   <Id>2</Id>
+   <Pos>568 27</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <DNAMolecule>
+   <Label>Wrong Tetramer</Label>
+   <Id>3</Id>
+   <Pos>83 162</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <SquareWaveControlVariable>
+   <Label>Monomer</Label>
+   <Id>4</Id>
+   <Pos>83 27</Pos>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <Parameters>
+    <Number>0</Number>
+    <Values>1 1</Values>
+    <Duration>1000 10</Duration>
+    <TransitionTime>2 2</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+   <Parameters>
+    <Number>1</Number>
+    <Values>0 1</Values>
+    <Duration>10 10</Duration>
+    <TransitionTime>2 2</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+   <Parameters>
+    <Number>2</Number>
+    <Values>0 1</Values>
+    <Duration>10 10</Duration>
+    <TransitionTime>2 2</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+   <Parameters>
+    <Number>3</Number>
+    <Values>0 1</Values>
+    <Duration>10 10</Duration>
+    <TransitionTime>2 2</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+  </SquareWaveControlVariable>
+ </Molecules>
+ <Subnetworks/>
+ <Reactions>
+  <MassActionReaction>
+   <Label>Rxn 2</Label>
+   <Id>7</Id>
+   <Pos>198 27</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>5</Id>
+     <Product>
+      <Label>Dimer</Label>
+      <Id>1</Id>
+     </Product>
+     <Coefficient>2</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>6</Id>
+     <Reactant>
+      <Label>Monomer</Label>
+      <Id>4</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>Rxn 3</Label>
+   <Id>10</Id>
+   <Pos>443 27</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>8</Id>
+     <Reactant>
+      <Label>Dimer</Label>
+      <Id>1</Id>
+     </Reactant>
+     <Coefficient>2</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>9</Id>
+     <Product>
+      <Label>Correct Tetramer</Label>
+      <Id>2</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>Rxn 1</Label>
+   <Id>13</Id>
+   <Pos>83 102</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>11</Id>
+     <Product>
+      <Label>Wrong Tetramer</Label>
+      <Id>3</Id>
+     </Product>
+     <Coefficient>4</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>12</Id>
+     <Reactant>
+      <Label>Monomer</Label>
+      <Id>4</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+ </Reactions>
+</Network>

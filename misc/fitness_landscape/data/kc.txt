@@ -1,0 +1,27 @@
+1	GalExt -> Gal : diffusion
+20	Gal1-2-5-7-10 + GalExt -> Gal + Gal1-2-5-7-10
+20	Gal1-2-5-7-10 + Gal -> Glu-6P + Gal1-2-5-7-10
+100	Glu-6P -> Glu
+200	Glu + gal4g -> gal4gX + Glu
+10	gal4gX -> gal4g
+400	gal4g -> gal4g + Gal4
+2	gal*g + Gal4 -> gal*g-Gal4
+100	gal*g-Gal4 ->gal*g + Gal4
+200	gal*-Gal4 + Gal80 -> Gal4_80
+20	Gal4_80 -> Gal80 + gal*g-Gal4
+20	Gal3*+ Gal4_80  -> Gal4_80_3 +  Gal3*
+10	Gal4_80_3 -> Gal4_80
+10	gal*g-Gal4 -> gal*g-Gal4 + Gal80
+200	gal*g-Gal4 -> gal*g-Gal4 + Gal3
+200	gal4_80_3 -> gal4_80_3 + Gal80
+200	gal4_80_3 -> gal4_80_3 + Gal3
+1000	gal4_80_3 -> gal4_80_3 + Gal1-2-5-7-10
+100	gal*g-Gal4 -> gal*g-Gal4+ Gal1-2-5-7-10
+10	GluExt -> Glu
+50	Glu -> 0
+50	Gal4 -> 0
+50	Gal80 -> 0
+50	Gal3 -> 0
+100	Gal1-2-5-7-10 -> 0
+20	Gal + Gal3 ->Gal +  Gal3*
+10	Gal3* -> Gal3

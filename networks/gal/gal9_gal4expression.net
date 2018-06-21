@@ -1,0 +1,211 @@
+<?xml version="1.0" standalone="yes"?>
+<Network>
+ <Info>
+  <Program>Network Editor 0.07 devel</Program>
+  <Format>19</Format>
+  <SaveDateTime>Mon Oct 13 13:57:50 2003</SaveDateTime>
+  <Version>24</Version>
+ </Info>
+ <Editor>
+  <GridSpacing>5 5</GridSpacing>
+  <SnapToGrid/>
+  <DrawLabel/>
+  <DrawIcon/>
+ </Editor>
+ <Fitness>
+  <Function>Glu6p * Constant Glucose</Function>
+ </Fitness>
+ <Simulation>
+  <SimulationMethod>ODE</SimulationMethod>
+  <TimeBegin>0</TimeBegin>
+  <TimeEnd>230</TimeEnd>
+  <TimeStepSize>0.1</TimeStepSize>
+  <SteadyStateTolerance>1e-06</SteadyStateTolerance>
+  <AbsoluteTolerance>1e-08</AbsoluteTolerance>
+  <RelativeTolerance>0.0001</RelativeTolerance>
+  <MaxStep>1</MaxStep>
+  <MinStep>0</MinStep>
+  <Environments>
+   <Environment current="true" >Environment 1</Environment>
+   <Environment>Environment 2</Environment>
+   <Environment>Environment 3</Environment>
+   <Environment>Environment 4</Environment>
+  </Environments>
+  <NumReplicates>20</NumReplicates>
+  <HistogramUpdateRate>-1</HistogramUpdateRate>
+ </Simulation>
+ <Molecules>
+  <TranscriptionFactorMolecule>
+   <Label>Gal4p</Label>
+   <Id>1</Id>
+   <Pos>953 483</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+   <Exported/>
+  </TranscriptionFactorMolecule>
+  <MetaboliteMolecule>
+   <Label>Glu</Label>
+   <Id>2</Id>
+   <Pos>949 261</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+   <Exported/>
+  </MetaboliteMolecule>
+  <DNAMolecule>
+   <Label>gal4g</Label>
+   <Id>3</Id>
+   <Pos>953 368</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <DNAMolecule>
+   <Label>gal4gX</Label>
+   <Id>4</Id>
+   <Pos>953 303</Pos>
+   <InitialConcentration>1</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <TranscriptionFactorMolecule>
+   <Label>TransCost</Label>
+   <Id>5</Id>
+   <Pos>774 393</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+   <Exported/>
+  </TranscriptionFactorMolecule>
+ </Molecules>
+ <Subnetworks/>
+ <Reactions>
+  <MassActionReaction>
+   <Label>S2</Label>
+   <Id>9</Id>
+   <Pos>874 338</Pos>
+   <Kf>125</Kf>
+   <Kr>1</Kr>
+   <Notes>This reaction is mediated by Mig1
+</Notes>
+   <Edges>
+    <ReactionEdge>
+     <Id>6</Id>
+     <Reactant>
+      <Label>gal4g</Label>
+      <Id>3</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>7</Id>
+     <Product>
+      <Label>gal4gX</Label>
+      <Id>4</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>8</Id>
+     <Reactant>
+      <Label>Glu</Label>
+      <Id>2</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>S1</Label>
+   <Id>13</Id>
+   <Pos>1023 338</Pos>
+   <Kf>640</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>10</Id>
+     <Reactant>
+      <Label>gal4gX</Label>
+      <Id>4</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>11</Id>
+     <Product>
+      <Label>gal4g</Label>
+      <Id>3</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>12</Id>
+     <Product>
+      <Label>Glu</Label>
+      <Id>2</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>E05</Label>
+   <Id>17</Id>
+   <Pos>953 428</Pos>
+   <Kf>9</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>14</Id>
+     <Reactant>
+      <Label>gal4g</Label>
+      <Id>3</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>15</Id>
+     <Product>
+      <Label>gal4g</Label>
+      <Id>3</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>16</Id>
+     <Product>
+      <Label>Gal4p</Label>
+      <Id>1</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>TD3</Label>
+   <Id>20</Id>
+   <Pos>868 433</Pos>
+   <Kf>91</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>18</Id>
+     <Reactant>
+      <Label>Gal4p</Label>
+      <Id>1</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>19</Id>
+     <Product>
+      <Label>TransCost</Label>
+      <Id>5</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+ </Reactions>
+</Network>

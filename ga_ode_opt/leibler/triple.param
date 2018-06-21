@@ -1,0 +1,231 @@
+Network file: triple.net
+
+Population size: 20000
+# Must be even number if using 2pt crossover
+
+Client-server mode: true
+# Must be true or false
+
+Work-unit size: 100
+# The number of individuals sent to each client
+
+#Master Address: 170.54.124.31
+Master Address: 10.56.0.4
+# The address of the machine that is responsible for dividing up work
+
+Maximize fitness function: false
+# Must be true or false
+
+Elitism: true
+# Ensure best individual survives - Must be true / false
+
+Replace failures: true
+# Replace any individual whose fitness could not be computed
+# with a new random individual - Must be true / false
+
+Simplex size: 1
+# The number of top individuals to perform local area optimization on
+# using the simplex algorithm.  x<=0 => disable
+
+Time limit type: Timer
+# The interpretation of the time limit placed on generation - Must be None / Iteration / Timer
+# If limit type = Iteration => this is the maximum number of iterations the simplex will make
+# If limit type = Timer => this is the maximum amount of time the simplex method will take
+# If limit type = Timer && CS_Mode => this is the maximum amount of time allocated to the 
+#                                     generation including GA specific and Simplex
+
+Time limit: 60
+# The time limit in either seconds or iterations placed on the generation.
+# See "Time limit type" for more details
+
+Number of generations: 50
+# -1 => never end
+
+Selection pressure: 0.2
+
+Crossover type: NPt
+# Options are None, NPt, TwoPt
+
+Shift mutation range: 0.05
+# Shift values by +- 5%
+
+Save best interval: 1
+Save best prefix: best
+Print population interval: 0
+Print population stats interval: 1
+
+Population identity check interval: 1
+Population identity limit: 0.50
+
+Random seed: -1
+# -1 => generate one
+
+Integer parameters: false
+Parameter ranges:
+# Fields _MUST_ be separated by tabs
+# Original model
+#    0	d133::LacI          	d133::LacI --> 0                                                                	0.010000
+#    1	d133::TetR          	d133::TetR --> 0                                                                	0.010000
+#    2	d133::lambda cI     	d133::lambda cI --> 0                                                           	0.010000
+#    3	d133::GFP           	d133::GFP --> 0                                                                 	1.000000
+#    4	d133::LacIX         	d133::LacIX --> 0                                                               	0.000000
+#    5	d133::TetRX         	d133::TetRX --> 0                                                               	0.000000
+#    6	d133::T1            	LacIg --> LacIg + LacI                                                          	1.000000
+#    7	d133::T2            	TetRg --> TetRg + TetR                                                          	1.000000
+#    8/9	d133::PL2           	(lambda cIg) + 4LacI <-> (lambda cIgX)                                          	1.000000
+#   10	d133::T3            	(lambda cIg) --> (lambda cIg) + (lambda cI)                                     	1.000000
+#   11/12	d133::PL-a          	GFPg + 2(lambda cI) <-> GFPgX                                                   	1.000000
+#   13	d133::T4            	GFPg --> GFPg + GFP                                                             	10.000000
+#   14/15	d133::PT            	TetRg + 2TetR <-> TetRgX                                                        	1.000000
+#   16/17	d133::PL+           	LacIg + 2(lambda cI) <-> LacIgX                                                 	1.000000
+#   18/19	d133::R1            	IPTG + LacI <-> LacIX                                                           	1.000000
+#   20/21	d133::R2            	aTc + TetR <-> TetRX                                                            	1.000000
+#   22	d038::LacI          	d038::LacI --> 0                                                                	0.010000
+#   23	d038::TetR          	d038::TetR --> 0                                                                	0.010000
+#   24	d038::lambda cI     	d038::lambda cI --> 0                                                           	0.010000
+#   25	d038::GFP           	d038::GFP --> 0                                                                 	1.000000
+#   26	d038::LacIX         	d038::LacIX --> 0                                                               	0.000000
+#   27	d038::TetRX         	d038::TetRX --> 0                                                               	0.000000
+#   28	d038::T1            	LacIg --> LacIg + LacI                                                          	1.000000
+#   29	d038::T2            	TetRg --> TetRg + TetR                                                          	1.000000
+#   30/31	d038::PL2           	(lambda cIg) + 4LacI <-> (lambda cIgX)                                          	1.000000
+#   32	d038::T3            	(lambda cIg) --> (lambda cIg) + (lambda cI)                                     	1.000000
+#   33/34	d038::PL-a          	GFPg + 2(lambda cI) <-> GFPgX                                                   	1.000000
+#   35	d038::T4            	GFPg --> GFPg + GFP                                                             	10.000000
+#   36/37	d038::PTb           	TetRg + 2TetR <-> TetRgX                                                        	1.000000
+#   38/39	d038::PTa           	LacIg + 2TetR <-> LacIgX                                                        	1.000000
+#   40/41	d038::R1            	IPTG + LacI <-> LacIX                                                           	1.000000
+#   42/43	d038::R2            	aTc + TetR <-> TetRX                                                            	1.000000
+#   44	d016::LacI          	d016::LacI --> 0                                                                	0.010000
+#   45	d016::TetR          	d016::TetR --> 0                                                                	0.010000
+#   46	d016::lambda cI     	d016::lambda cI --> 0                                                           	0.010000
+#   47	d016::GFP           	d016::GFP --> 0                                                                 	1.000000
+#   48	d016::LacIX         	d016::LacIX --> 0                                                               	0.000000
+#   49	d016::TetRX         	d016::TetRX --> 0                                                               	0.000000
+#   50	d016::T1            	LacIg --> LacIg + LacI                                                          	1.000000
+#   51	d016::T2            	TetRg --> TetRg + TetR                                                          	1.000000
+#   52/53	d016::PL2           	(lambda cIg) + 4LacI <-> (lambda cIgX)                                          	1.000000
+#   54	d016::T3            	(lambda cIg) --> (lambda cIg) + (lambda cI)                                     	1.000000
+#   55/56	d016::PL-a          	GFPg + 2(lambda cI) <-> GFPgX                                                   	1.000000
+#   57	d016::T4            	GFPg --> GFPg + GFP                                                             	10.000000
+#   58/59	d016::PT            	TetRg + 2TetR <-> TetRgX                                                        	1.000000
+#   60/61	d016::PL1           	LacIg + 4LacI <-> LacIgX                                                        	1.000000
+#   62/63	d016::R1            	IPTG + LacI <-> LacIX                                                           	1.000000
+#   64/65	d016::R2            	aTc + TetR <-> TetRX                                                            	1.000000
+# Reactions
+# RxnName	Index into param table	Rxn Equation	Kinetic value
+d133::LacI	0		# d133::LacI --> 0                                            	0.010000
+d133::TetR	1		# d133::TetR --> 0                                            	0.010000
+d133::lambda cI	2		# d133::lambda cI --> 0                                       	0.010000
+d133::GFP	3		# d133::GFP --> 0                                             	1.000000
+d133::LacIX	4		# d133::LacIX --> 0                                           	0.000000
+d133::TetRX	5		# d133::TetRX --> 0                                           	0.000000
+d133::T1	6		# LacIg --> LacIg + LacI                                      	1.000000
+d133::T2	7		# TetRg --> TetRg + TetR                                      	1.000000
+d133::PL2	8	9	# (lambda cIg) + 4LacI <-> (lambda cIgX)                      	1.000000
+d133::T3	10		# (lambda cIg) --> (lambda cIg) + (lambda cI)                 	1.000000
+d133::PL-a	11	12	# GFPg + 2(lambda cI) <-> GFPgX                               	1.000000
+d133::T4	13		# GFPg --> GFPg + GFP                                         	10.000000
+d133::PT	14	15	# TetRg + 2TetR <-> TetRgX                                    	1.000000
+d133::PL+	16	17	# LacIg + 2(lambda cI) <-> LacIgX                             	1.000000
+d133::R1	18	19	# IPTG + LacI <-> LacIX                                       	1.000000
+d133::R2	20	21	# aTc + TetR <-> TetRX                                        	1.000000
+d038::LacI	22		# d038::LacI --> 0                                            	0.010000
+d038::TetR	23		# d038::TetR --> 0                                            	0.010000
+d038::lambda cI	24		# d038::lambda cI --> 0                                       	0.010000
+d038::GFP	25		# d038::GFP --> 0                                             	1.000000
+d038::LacIX	26		# d038::LacIX --> 0                                           	0.000000
+d038::TetRX	27		# d038::TetRX --> 0                                           	0.000000
+d038::T1	28		# LacIg --> LacIg + LacI                                      	1.000000
+d038::T2	29		# TetRg --> TetRg + TetR                                      	1.000000
+d038::PL2	30	31	# (lambda cIg) + 4LacI <-> (lambda cIgX)                      	1.000000
+d038::T3	32		# (lambda cIg) --> (lambda cIg) + (lambda cI)                 	1.000000
+d038::PL-a	33	34	# GFPg + 2(lambda cI) <-> GFPgX                               	1.000000
+d038::T4	35		# GFPg --> GFPg + GFP                                         	10.000000
+d038::PTb	36	37	# TetRg + 2TetR <-> TetRgX                                    	1.000000
+d038::PTa	36	37	# LacIg + 2TetR <-> LacIgX                                    	1.000000
+d038::R1	38	39	# IPTG + LacI <-> LacIX                                       	1.000000
+d038::R2	40	41	# aTc + TetR <-> TetRX                                        	1.000000
+d016::LacI	42		# d016::LacI --> 0                                            	0.010000
+d016::TetR	43		# d016::TetR --> 0                                            	0.010000
+d016::lambda cI	44		# d016::lambda cI --> 0                                       	0.010000
+d016::GFP	45		# d016::GFP --> 0                                             	1.000000
+d016::LacIX	46		# d016::LacIX --> 0                                           	0.000000
+d016::TetRX	47		# d016::TetRX --> 0                                           	0.000000
+d016::T1	48		# LacIg --> LacIg + LacI                                      	1.000000
+d016::T2	49		# TetRg --> TetRg + TetR                                      	1.000000
+d016::PL2	50	51	# (lambda cIg) + 4LacI <-> (lambda cIgX)                      	1.000000
+d016::T3	52		# (lambda cIg) --> (lambda cIg) + (lambda cI)                 	1.000000
+d016::PL-a	53	54	# GFPg + 2(lambda cI) <-> GFPgX                               	1.000000
+d016::T4	55		# GFPg --> GFPg + GFP                                         	10.000000
+d016::PT	56	57	# TetRg + 2TetR <-> TetRgX                                    	1.000000
+d016::PL1	58	59	# LacIg + 4LacI <-> LacIgX                                    	1.000000
+d016::R1	60	61	# IPTG + LacI <-> LacIX                                       	1.000000
+d016::R2	62	63	# aTc + TetR <-> TetRX                                        	1.000000
+# Parameters
+# Param Index	Min	Max			-or-
+# Param Index	Fixed Value
+0	0.000000	1000000.000000	# 0.010000
+1	0.000000	1000000.000000	# 0.010000
+2	0.000000	1000000.000000	# 0.010000
+3	0.000000	1000000.000000	# 1.000000
+4	0.000000	1000000.000000	# 0.000000
+5	0.000000	1000000.000000	# 0.000000
+6	0.000000	1000000.000000	# 1.000000
+7	0.000000	1000000.000000	# 1.000000
+8	0.000000	1000000.000000	# 1.000000
+9	0.000000	1000000.000000	# 1.000000
+10	0.000000	1000000.000000	# 1.000000
+11	0.000000	1000000.000000	# 10.000000
+12	0.000000	1000000.000000	# 1.000000
+13	0.000000	1000000.000000	# 10.000000
+14	0.000000	1000000.000000	# 1.000000
+15	0.000000	1000000.000000	# 1.000000
+16	0.000000	1000000.000000	# 1.000000
+17	0.000000	1000000.000000	# 1.000000
+18	0.000000	1000000.000000	# 1.000000
+19	0.000000	1000000.000000	# 1.000000
+20	0.000000	1000000.000000	# 1.000000
+21	0.000000	1000000.000000	# 1.000000
+22	0.000000	1000000.000000	# 0.010000
+23	0.000000	1000000.000000	# 0.010000
+24	0.000000	1000000.000000	# 0.010000
+25	0.000000	1000000.000000	# 1.000000
+26	0.000000	1000000.000000	# 0.000000
+27	0.000000	1000000.000000	# 0.000000
+28	0.000000	1000000.000000	# 1.000000
+29	0.000000	1000000.000000	# 1.000000
+30	0.000000	1000000.000000	# 1.000000
+31	0.000000	1000000.000000	# 1.000000
+32	0.000000	1000000.000000	# 1.000000
+33	0.000000	1000000.000000	# 10.000000
+34	0.000000	1000000.000000	# 1.000000
+35	0.000000	1000000.000000	# 10.000000
+36	0.000000	1000000.000000	# 1.000000
+37	0.000000	1000000.000000	# 1.000000
+38	0.000000	1000000.000000	# 1.000000
+39	0.000000	1000000.000000	# 1.000000
+40	0.000000	1000000.000000	# 1.000000
+41	0.000000	1000000.000000	# 1.000000
+42	0.000000	1000000.000000	# 1.000000
+43	0.000000	1000000.000000	# 1.000000
+44	0.000000	1000000.000000	# 0.010000
+45	0.000000	1000000.000000	# 0.010000
+46	0.000000	1000000.000000	# 0.010000
+47	0.000000	1000000.000000	# 1.000000
+48	0.000000	1000000.000000	# 0.000000
+49	0.000000	1000000.000000	# 0.000000
+50	0.000000	1000000.000000	# 1.000000
+51	0.000000	1000000.000000	# 1.000000
+52	0.000000	1000000.000000	# 1.000000
+53	0.000000	1000000.000000	# 1.000000
+54	0.000000	1000000.000000	# 1.000000
+55	0.000000	1000000.000000	# 10.000000
+56	0.000000	1000000.000000	# 1.000000
+57	0.000000	1000000.000000	# 10.000000
+58	0.000000	1000000.000000	# 1.000000
+59	0.000000	1000000.000000	# 1.000000
+60	0.000000	1000000.000000	# 1.000000
+61	0.000000	1000000.000000	# 1.000000
+62	0.000000	1000000.000000	# 1.000000
+63	0.000000	1000000.000000	# 1.000000

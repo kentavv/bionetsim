@@ -1,0 +1,26 @@
+void
+func1(int a) {
+  func2(a+1);
+}
+void
+func2(int b) {
+  func3(b+1);
+}
+void
+func3(int c) {
+  func4(c+1);
+}
+void
+func4(int d) {
+  func5(d+1);
+}
+void
+func5(int e) {
+  e;
+  e+a;
+}
+int
+main() {
+  func1(1);
+}
+

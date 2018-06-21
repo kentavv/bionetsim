@@ -1,0 +1,642 @@
+<?xml version="1.0" standalone="yes"?>
+<Network>
+ <Info>
+  <Program>Network Editor 0.07 devel</Program>
+  <Format>20</Format>
+  <SaveDateTime>Wed Nov 12 13:56:57 2003</SaveDateTime>
+  <Version>50</Version>
+ </Info>
+ <Editor>
+  <GridSpacing>20 20</GridSpacing>
+  <SnapToGrid/>
+  <Grid display="true" />
+  <Labels display="true" />
+  <Icon display="true" />
+ </Editor>
+ <Fitness>
+  <Function>Generic</Function>
+  <Generic>
+   <Target>
+    <Molecule>GFP</Molecule>
+    <Values>571.395	658.952	284.091	255.054</Values>
+   </Target>
+  </Generic>
+ </Fitness>
+ <Simulation>
+  <SimulationMethod>ODE</SimulationMethod>
+  <TimeBegin>0</TimeBegin>
+  <TimeEnd>100</TimeEnd>
+  <TimeStepSize>0.1</TimeStepSize>
+  <SimulateToSteadyState/>
+  <SteadyStateTolerance>1e-06</SteadyStateTolerance>
+  <AbsoluteTolerance>1e-08</AbsoluteTolerance>
+  <RelativeTolerance>0.0001</RelativeTolerance>
+  <MaxStep>1</MaxStep>
+  <MinStep>0</MinStep>
+  <Environments>
+   <Environment current="true" >aTc-/IPTG-</Environment>
+   <Environment>aTc-/IPTG+</Environment>
+   <Environment>aTc+/IPTG-</Environment>
+   <Environment>aTc+/IPTG+</Environment>
+  </Environments>
+  <NumReplicates>20</NumReplicates>
+  <HistogramUpdateRate>-1</HistogramUpdateRate>
+ </Simulation>
+ <Molecules>
+  <DNAMolecule>
+   <Label>LacIgX</Label>
+   <Id>1</Id>
+   <Pos>120 40</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+   <NotPlotted/>
+  </DNAMolecule>
+  <DNAMolecule>
+   <Label>LacIg</Label>
+   <Id>2</Id>
+   <Pos>120 120</Pos>
+   <InitialConcentration>1</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <EnzymeMolecule>
+   <Label>LacI</Label>
+   <Id>3</Id>
+   <Pos>120 200</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>4</DefaultCoefficient>
+   <DecayRate>0.01</DecayRate>
+   <Decays/>
+   <Notes>LacI is also called the lac repressor in
+its tetramer form.  There are ~10 
+tetramers / wt cell   (Lewin pg.277)</Notes>
+  </EnzymeMolecule>
+  <DNAMolecule>
+   <Label>TetRgX</Label>
+   <Id>4</Id>
+   <Pos>280 40</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+   <NotPlotted/>
+  </DNAMolecule>
+  <DNAMolecule>
+   <Label>TetRg</Label>
+   <Id>5</Id>
+   <Pos>280 120</Pos>
+   <InitialConcentration>1</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <EnzymeMolecule>
+   <Label>TetR</Label>
+   <Id>6</Id>
+   <Pos>280 200</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>2</DefaultCoefficient>
+   <DecayRate>0.01</DecayRate>
+   <Decays/>
+   <Notes>http://pfam.wustl.edu/cgi-bin/getdesc?name=tetR
+http://userpage.chemie.fu-berlin.de/saenger/projects/tet.html
+http://pdb.weizmann.ac.il/scop/data/scop.b.b.bdc.b.b.b.html
+Forms dimer</Notes>
+  </EnzymeMolecule>
+  <DNAMolecule>
+   <Label>lambda cIgX</Label>
+   <Id>7</Id>
+   <Pos>440 40</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+   <NotPlotted/>
+  </DNAMolecule>
+  <DNAMolecule>
+   <Label>lambda cIg</Label>
+   <Id>8</Id>
+   <Pos>440 120</Pos>
+   <InitialConcentration>1</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <EnzymeMolecule>
+   <Label>lambda cI</Label>
+   <Id>9</Id>
+   <Pos>440 200</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>2</DefaultCoefficient>
+   <DecayRate>0.01</DecayRate>
+   <Decays/>
+   <Notes>One of the lambda repressors...
+binds as a dimer
+</Notes>
+  </EnzymeMolecule>
+  <DNAMolecule>
+   <Label>GFPgX</Label>
+   <Id>10</Id>
+   <Pos>600 40</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+   <NotPlotted/>
+  </DNAMolecule>
+  <DNAMolecule>
+   <Label>GFPg</Label>
+   <Id>11</Id>
+   <Pos>600 120</Pos>
+   <InitialConcentration>1</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <EnzymeMolecule>
+   <Label>GFP</Label>
+   <Id>12</Id>
+   <Pos>600 200</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>1</DecayRate>
+   <Decays/>
+  </EnzymeMolecule>
+  <SquareWaveControlVariable>
+   <Label>IPTG</Label>
+   <Id>13</Id>
+   <Pos>60 320</Pos>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <Parameters>
+    <Number>0</Number>
+    <Values>0 0</Values>
+    <Duration>100 0</Duration>
+    <TransitionTime>0 0</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+   <Parameters>
+    <Number>1</Number>
+    <Values>100 0</Values>
+    <Duration>100 0</Duration>
+    <TransitionTime>0 0</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+   <Parameters>
+    <Number>2</Number>
+    <Values>0 0</Values>
+    <Duration>100 0</Duration>
+    <TransitionTime>0 0</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+   <Parameters>
+    <Number>3</Number>
+    <Values>100 0</Values>
+    <Duration>100 0</Duration>
+    <TransitionTime>0 0</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+  </SquareWaveControlVariable>
+  <SquareWaveControlVariable>
+   <Label>aTc</Label>
+   <Id>14</Id>
+   <Pos>220 320</Pos>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <Parameters>
+    <Number>0</Number>
+    <Values>0 0</Values>
+    <Duration>100 0</Duration>
+    <TransitionTime>0 0</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+   <Parameters>
+    <Number>1</Number>
+    <Values>0 0</Values>
+    <Duration>100 0</Duration>
+    <TransitionTime>0 0</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+   <Parameters>
+    <Number>2</Number>
+    <Values>100 0</Values>
+    <Duration>100 0</Duration>
+    <TransitionTime>0 0</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+   <Parameters>
+    <Number>3</Number>
+    <Values>100 0</Values>
+    <Duration>100 0</Duration>
+    <TransitionTime>0 0</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+  </SquareWaveControlVariable>
+  <ComplexMolecule>
+   <Label>LacIX</Label>
+   <Id>15</Id>
+   <Pos>120 360</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+   <Decays/>
+  </ComplexMolecule>
+  <ComplexMolecule>
+   <Label>TetRX</Label>
+   <Id>16</Id>
+   <Pos>280 360</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+   <Decays/>
+  </ComplexMolecule>
+ </Molecules>
+ <Subnetworks/>
+ <Reactions>
+  <MassActionReaction>
+   <Label>T1</Label>
+   <Id>20</Id>
+   <Pos>120 160</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>17</Id>
+     <Reactant>
+      <Label>LacIg</Label>
+      <Id>2</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>18</Id>
+     <Product>
+      <Label>LacIg</Label>
+      <Id>2</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>19</Id>
+     <Product>
+      <Label>LacI</Label>
+      <Id>3</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>T2</Label>
+   <Id>24</Id>
+   <Pos>280 160</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>21</Id>
+     <Reactant>
+      <Label>TetRg</Label>
+      <Id>5</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>22</Id>
+     <Product>
+      <Label>TetRg</Label>
+      <Id>5</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>23</Id>
+     <Product>
+      <Label>TetR</Label>
+      <Id>6</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>PT</Label>
+   <Id>31</Id>
+   <Pos>440 80</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Reversible/>
+   <Edges>
+    <ReactionEdge>
+     <Id>25</Id>
+     <Reactant>
+      <Label>lambda cIg</Label>
+      <Id>8</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>26</Id>
+     <Product>
+      <Label>lambda cIgX</Label>
+      <Id>7</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>27</Id>
+     <Reactant>
+      <Label>TetR</Label>
+      <Id>6</Id>
+     </Reactant>
+     <Coefficient>2</Coefficient>
+     <InternalNodes>
+      <InternalNode>
+       <Id>28</Id>
+       <Pos>280 260</Pos>
+      </InternalNode>
+      <InternalNode>
+       <Id>29</Id>
+       <Pos>380 260</Pos>
+      </InternalNode>
+      <InternalNode>
+       <Id>30</Id>
+       <Pos>380 80</Pos>
+      </InternalNode>
+     </InternalNodes>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>T3</Label>
+   <Id>35</Id>
+   <Pos>440 160</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>32</Id>
+     <Reactant>
+      <Label>lambda cIg</Label>
+      <Id>8</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>33</Id>
+     <Product>
+      <Label>lambda cIg</Label>
+      <Id>8</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>34</Id>
+     <Product>
+      <Label>lambda cI</Label>
+      <Id>9</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>PL-a</Label>
+   <Id>42</Id>
+   <Pos>600 80</Pos>
+   <Kf>10</Kf>
+   <Kr>1</Kr>
+   <Reversible/>
+   <Edges>
+    <ReactionEdge>
+     <Id>36</Id>
+     <Reactant>
+      <Label>GFPg</Label>
+      <Id>11</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>37</Id>
+     <Product>
+      <Label>GFPgX</Label>
+      <Id>10</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>38</Id>
+     <Reactant>
+      <Label>lambda cI</Label>
+      <Id>9</Id>
+     </Reactant>
+     <Coefficient>2</Coefficient>
+     <InternalNodes>
+      <InternalNode>
+       <Id>39</Id>
+       <Pos>440 280</Pos>
+      </InternalNode>
+      <InternalNode>
+       <Id>40</Id>
+       <Pos>540 280</Pos>
+      </InternalNode>
+      <InternalNode>
+       <Id>41</Id>
+       <Pos>540 80</Pos>
+      </InternalNode>
+     </InternalNodes>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>T4</Label>
+   <Id>46</Id>
+   <Pos>600 160</Pos>
+   <Kf>10</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>43</Id>
+     <Reactant>
+      <Label>GFPg</Label>
+      <Id>11</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>44</Id>
+     <Product>
+      <Label>GFPg</Label>
+      <Id>11</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>45</Id>
+     <Product>
+      <Label>GFP</Label>
+      <Id>12</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>PL+</Label>
+   <Id>53</Id>
+   <Pos>280 80</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Reversible/>
+   <Edges>
+    <ReactionEdge>
+     <Id>47</Id>
+     <Reactant>
+      <Label>TetRg</Label>
+      <Id>5</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>48</Id>
+     <Product>
+      <Label>TetRgX</Label>
+      <Id>4</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>49</Id>
+     <Reactant>
+      <Label>lambda cI</Label>
+      <Id>9</Id>
+     </Reactant>
+     <Coefficient>2</Coefficient>
+     <InternalNodes>
+      <InternalNode>
+       <Id>50</Id>
+       <Pos>440 280</Pos>
+      </InternalNode>
+      <InternalNode>
+       <Id>51</Id>
+       <Pos>220 280</Pos>
+      </InternalNode>
+      <InternalNode>
+       <Id>52</Id>
+       <Pos>220 80</Pos>
+      </InternalNode>
+     </InternalNodes>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>PL1</Label>
+   <Id>60</Id>
+   <Pos>120 80</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Reversible/>
+   <Edges>
+    <ReactionEdge>
+     <Id>54</Id>
+     <Reactant>
+      <Label>LacIg</Label>
+      <Id>2</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>55</Id>
+     <Product>
+      <Label>LacIgX</Label>
+      <Id>1</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>56</Id>
+     <Reactant>
+      <Label>LacI</Label>
+      <Id>3</Id>
+     </Reactant>
+     <Coefficient>4</Coefficient>
+     <InternalNodes>
+      <InternalNode>
+       <Id>57</Id>
+       <Pos>120 240</Pos>
+      </InternalNode>
+      <InternalNode>
+       <Id>58</Id>
+       <Pos>60 240</Pos>
+      </InternalNode>
+      <InternalNode>
+       <Id>59</Id>
+       <Pos>60 80</Pos>
+      </InternalNode>
+     </InternalNodes>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>R1</Label>
+   <Id>64</Id>
+   <Pos>120 320</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Reversible/>
+   <Edges>
+    <ReactionEdge>
+     <Id>61</Id>
+     <Reactant>
+      <Label>IPTG</Label>
+      <Id>13</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>62</Id>
+     <Product>
+      <Label>LacIX</Label>
+      <Id>15</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>63</Id>
+     <Reactant>
+      <Label>LacI</Label>
+      <Id>3</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>R2</Label>
+   <Id>68</Id>
+   <Pos>280 320</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Reversible/>
+   <Edges>
+    <ReactionEdge>
+     <Id>65</Id>
+     <Reactant>
+      <Label>aTc</Label>
+      <Id>14</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>66</Id>
+     <Reactant>
+      <Label>TetR</Label>
+      <Id>6</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>67</Id>
+     <Product>
+      <Label>TetRX</Label>
+      <Id>16</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+ </Reactions>
+</Network>

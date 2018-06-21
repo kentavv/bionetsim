@@ -1,0 +1,1145 @@
+<?xml version="1.0" standalone="yes"?>
+<Network>
+ <Info>
+  <Program>Network Editor 0.07 devel</Program>
+  <Format>22</Format>
+  <SaveDateTime>Thu Sep 30 17:53:50 2004</SaveDateTime>
+  <Version>6</Version>
+ </Info>
+ <Editor>
+  <GridSpacing>16 16</GridSpacing>
+  <SnapToGrid/>
+  <Grid display="false" />
+  <Labels display="true" />
+  <Icons display="false" />
+ </Editor>
+ <Fitness>
+  <Function>Null</Function>
+ </Fitness>
+ <Simulation>
+  <SimulationMethod>ODE</SimulationMethod>
+  <TimeBegin>0</TimeBegin>
+  <TimeEnd>4000</TimeEnd>
+  <TimeStepSize>0.1</TimeStepSize>
+  <SteadyStateTolerance>1e-06</SteadyStateTolerance>
+  <AbsoluteTolerance>1e-08</AbsoluteTolerance>
+  <RelativeTolerance>0.0001</RelativeTolerance>
+  <MaxStep>1</MaxStep>
+  <MinStep>0</MinStep>
+  <Environments>
+   <Environment current="true" >Environment 1</Environment>
+  </Environments>
+  <NumReplicates>20</NumReplicates>
+  <HistogramUpdateRate>-1</HistogramUpdateRate>
+ </Simulation>
+ <Molecules>
+  <DNAMolecule>
+   <Label>G000</Label>
+   <Id>1</Id>
+   <Pos>176 48</Pos>
+   <InitialConcentration>1</InitialConcentration>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <TranscriptionFactorMolecule>
+   <Label>P000</Label>
+   <Id>2</Id>
+   <Pos>128 112</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DecayRate>0</DecayRate>
+  </TranscriptionFactorMolecule>
+  <DNAMolecule>
+   <Label>G001</Label>
+   <Id>3</Id>
+   <Pos>416 176</Pos>
+   <InitialConcentration>1</InitialConcentration>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <TranscriptionFactorMolecule>
+   <Label>P001</Label>
+   <Id>4</Id>
+   <Pos>480 208</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DecayRate>0</DecayRate>
+  </TranscriptionFactorMolecule>
+  <DNAMolecule>
+   <Label>G001:(P001)</Label>
+   <Id>5</Id>
+   <Pos>512 80</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <DNAMolecule>
+   <Label>G001:(P000)</Label>
+   <Id>6</Id>
+   <Pos>320 192</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <DNAMolecule>
+   <Label>G000:(P001)</Label>
+   <Id>7</Id>
+   <Pos>416 64</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <ComplexMolecule>
+   <Label>PC003_001</Label>
+   <Id>8</Id>
+   <Pos>336 272</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DecayRate>0</DecayRate>
+  </ComplexMolecule>
+  <SquareWaveControlVariable>
+   <Label>CV1</Label>
+   <Id>9</Id>
+   <Pos>480 304</Pos>
+   <Parameters>
+    <Number>0</Number>
+    <Values>0 1</Values>
+    <Duration>2000 1</Duration>
+    <TransitionTime>0 0</TransitionTime>
+    <PhaseShift>-1000</PhaseShift>
+    <Noise>0</Noise>
+   </Parameters>
+  </SquareWaveControlVariable>
+  <SquareWaveControlVariable>
+   <Label>CV2</Label>
+   <Id>10</Id>
+   <Pos>32 112</Pos>
+   <Parameters>
+    <Number>0</Number>
+    <Values>0 1</Values>
+    <Duration>2000 1</Duration>
+    <TransitionTime>0 0</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+    <Noise>0</Noise>
+   </Parameters>
+  </SquareWaveControlVariable>
+ </Molecules>
+ <Subnetworks>
+  <Subnetwork>
+   <Label>Trans/Degrad 000</Label>
+   <Id>11</Id>
+   <Pos>64 48</Pos>
+   <Network>
+    <Molecules>
+     <DNAMolecule>
+      <Label>Gene</Label>
+      <Id>1</Id>
+      <Pos>64 64</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DecayRate>0</DecayRate>
+      <Exported/>
+     </DNAMolecule>
+     <TranscriptionFactorMolecule>
+      <Label>Protein</Label>
+      <Id>2</Id>
+      <Pos>288 64</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DecayRate>0</DecayRate>
+      <Exported/>
+     </TranscriptionFactorMolecule>
+    </Molecules>
+    <Subnetworks/>
+    <Reactions>
+     <MassActionReaction>
+      <Label>Translation</Label>
+      <Id>3</Id>
+      <Pos>176 64</Pos>
+      <Kf>0.559832</Kf>
+      <Kr>1</Kr>
+      <Edges>
+       <ReactionEdge>
+        <Id>5</Id>
+        <Reactant>
+         <Label>Gene</Label>
+         <Id>1</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>6</Id>
+        <Product>
+         <Label>Gene</Label>
+         <Id>1</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>7</Id>
+        <Product>
+         <Label>Protein</Label>
+         <Id>2</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+      </Edges>
+     </MassActionReaction>
+     <MassActionReaction>
+      <Label>Degradation</Label>
+      <Id>4</Id>
+      <Pos>400 64</Pos>
+      <Kf>0.0559599</Kf>
+      <Kr>1</Kr>
+      <Edges>
+       <ReactionEdge>
+        <Id>8</Id>
+        <Reactant>
+         <Label>Protein</Label>
+         <Id>2</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+      </Edges>
+     </MassActionReaction>
+    </Reactions>
+   </Network>
+   <Edges>
+    <SubnetworkEdge>
+     <Id>19</Id>
+     <SubnetworkMolecule>
+      <Label>Gene</Label>
+      <Id>1</Id>
+     </SubnetworkMolecule>
+     <Molecule>
+      <Label>G000</Label>
+      <Id>1</Id>
+     </Molecule>
+    </SubnetworkEdge>
+    <SubnetworkEdge>
+     <Id>20</Id>
+     <SubnetworkMolecule>
+      <Label>Protein</Label>
+      <Id>2</Id>
+     </SubnetworkMolecule>
+     <Molecule>
+      <Label>P000</Label>
+      <Id>2</Id>
+     </Molecule>
+     <InternalNodes>
+      <InternalNode>
+       <Id>21</Id>
+       <Pos>128 64</Pos>
+      </InternalNode>
+     </InternalNodes>
+    </SubnetworkEdge>
+   </Edges>
+  </Subnetwork>
+  <Subnetwork>
+   <Label>Trans/Degrad 001</Label>
+   <Id>12</Id>
+   <Pos>608 176</Pos>
+   <Network>
+    <Molecules>
+     <DNAMolecule>
+      <Label>Gene</Label>
+      <Id>1</Id>
+      <Pos>64 64</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DecayRate>0</DecayRate>
+      <Exported/>
+     </DNAMolecule>
+     <TranscriptionFactorMolecule>
+      <Label>Protein</Label>
+      <Id>2</Id>
+      <Pos>288 64</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DecayRate>0</DecayRate>
+      <Exported/>
+     </TranscriptionFactorMolecule>
+    </Molecules>
+    <Subnetworks/>
+    <Reactions>
+     <MassActionReaction>
+      <Label>Translation</Label>
+      <Id>3</Id>
+      <Pos>176 64</Pos>
+      <Kf>0.0404644</Kf>
+      <Kr>1</Kr>
+      <Edges>
+       <ReactionEdge>
+        <Id>5</Id>
+        <Reactant>
+         <Label>Gene</Label>
+         <Id>1</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>6</Id>
+        <Product>
+         <Label>Gene</Label>
+         <Id>1</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>7</Id>
+        <Product>
+         <Label>Protein</Label>
+         <Id>2</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+      </Edges>
+     </MassActionReaction>
+     <MassActionReaction>
+      <Label>Degradation</Label>
+      <Id>4</Id>
+      <Pos>400 64</Pos>
+      <Kf>0.0976988</Kf>
+      <Kr>1</Kr>
+      <Edges>
+       <ReactionEdge>
+        <Id>8</Id>
+        <Reactant>
+         <Label>Protein</Label>
+         <Id>2</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+      </Edges>
+     </MassActionReaction>
+    </Reactions>
+   </Network>
+   <Edges>
+    <SubnetworkEdge>
+     <Id>22</Id>
+     <SubnetworkMolecule>
+      <Label>Gene</Label>
+      <Id>1</Id>
+     </SubnetworkMolecule>
+     <Molecule>
+      <Label>G001</Label>
+      <Id>3</Id>
+     </Molecule>
+    </SubnetworkEdge>
+    <SubnetworkEdge>
+     <Id>23</Id>
+     <SubnetworkMolecule>
+      <Label>Protein</Label>
+      <Id>2</Id>
+     </SubnetworkMolecule>
+     <Molecule>
+      <Label>P001</Label>
+      <Id>4</Id>
+     </Molecule>
+     <InternalNodes>
+      <InternalNode>
+       <Id>24</Id>
+       <Pos>544 192</Pos>
+      </InternalNode>
+      <InternalNode>
+       <Id>25</Id>
+       <Pos>528 208</Pos>
+      </InternalNode>
+     </InternalNodes>
+    </SubnetworkEdge>
+   </Edges>
+  </Subnetwork>
+  <Subnetwork>
+   <Label>Promoted Trans 001</Label>
+   <Id>13</Id>
+   <Pos>624 80</Pos>
+   <Network>
+    <Molecules>
+     <DNAMolecule>
+      <Label>Gene</Label>
+      <Id>1</Id>
+      <Pos>208 96</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DecayRate>0</DecayRate>
+      <Exported/>
+     </DNAMolecule>
+     <TranscriptionFactorMolecule>
+      <Label>Trans. Factor</Label>
+      <Id>2</Id>
+      <Pos>64 96</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DecayRate>0</DecayRate>
+      <Exported/>
+     </TranscriptionFactorMolecule>
+     <TranscriptionFactorMolecule>
+      <Label>Gene:TF</Label>
+      <Id>3</Id>
+      <Pos>352 96</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DecayRate>0</DecayRate>
+      <Exported/>
+     </TranscriptionFactorMolecule>
+     <TranscriptionFactorMolecule>
+      <Label>Protein</Label>
+      <Id>4</Id>
+      <Pos>576 96</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DecayRate>0</DecayRate>
+      <Exported/>
+     </TranscriptionFactorMolecule>
+    </Molecules>
+    <Subnetworks/>
+    <Reactions>
+     <MassActionReaction>
+      <Label>Complex Formation</Label>
+      <Id>5</Id>
+      <Pos>208 160</Pos>
+      <Kf>0.983149</Kf>
+      <Kr>1</Kr>
+      <Edges>
+       <ReactionEdge>
+        <Id>8</Id>
+        <Reactant>
+         <Label>Gene</Label>
+         <Id>1</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>9</Id>
+        <Reactant>
+         <Label>Trans. Factor</Label>
+         <Id>2</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>10</Id>
+        <Product>
+         <Label>Gene:TF</Label>
+         <Id>3</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+      </Edges>
+     </MassActionReaction>
+     <MassActionReaction>
+      <Label>Complex Disassociation</Label>
+      <Id>6</Id>
+      <Pos>208 32</Pos>
+      <Kf>0.542184</Kf>
+      <Kr>1</Kr>
+      <Edges>
+       <ReactionEdge>
+        <Id>11</Id>
+        <Reactant>
+         <Label>Gene:TF</Label>
+         <Id>3</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>12</Id>
+        <Product>
+         <Label>Gene</Label>
+         <Id>1</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>13</Id>
+        <Product>
+         <Label>Trans. Factor</Label>
+         <Id>2</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+      </Edges>
+     </MassActionReaction>
+     <MassActionReaction>
+      <Label>Translation</Label>
+      <Id>7</Id>
+      <Pos>464 96</Pos>
+      <Kf>0.5017</Kf>
+      <Kr>1</Kr>
+      <Edges>
+       <ReactionEdge>
+        <Id>14</Id>
+        <Reactant>
+         <Label>Gene:TF</Label>
+         <Id>3</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>15</Id>
+        <Product>
+         <Label>Gene:TF</Label>
+         <Id>3</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>16</Id>
+        <Product>
+         <Label>Protein</Label>
+         <Id>4</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+      </Edges>
+     </MassActionReaction>
+    </Reactions>
+   </Network>
+   <Edges>
+    <SubnetworkEdge>
+     <Id>26</Id>
+     <SubnetworkMolecule>
+      <Label>Gene</Label>
+      <Id>1</Id>
+     </SubnetworkMolecule>
+     <Molecule>
+      <Label>G001</Label>
+      <Id>3</Id>
+     </Molecule>
+     <InternalNodes>
+      <InternalNode>
+       <Id>27</Id>
+       <Pos>464 64</Pos>
+      </InternalNode>
+      <InternalNode>
+       <Id>28</Id>
+       <Pos>464 128</Pos>
+      </InternalNode>
+     </InternalNodes>
+    </SubnetworkEdge>
+    <SubnetworkEdge>
+     <Id>29</Id>
+     <SubnetworkMolecule>
+      <Label>Trans. Factor</Label>
+      <Id>2</Id>
+     </SubnetworkMolecule>
+     <Molecule>
+      <Label>P001</Label>
+      <Id>4</Id>
+     </Molecule>
+     <InternalNodes>
+      <InternalNode>
+       <Id>30</Id>
+       <Pos>480 112</Pos>
+      </InternalNode>
+     </InternalNodes>
+    </SubnetworkEdge>
+    <SubnetworkEdge>
+     <Id>31</Id>
+     <SubnetworkMolecule>
+      <Label>Gene:TF</Label>
+      <Id>3</Id>
+     </SubnetworkMolecule>
+     <Molecule>
+      <Label>G001:(P001)</Label>
+      <Id>5</Id>
+     </Molecule>
+    </SubnetworkEdge>
+    <SubnetworkEdge>
+     <Id>32</Id>
+     <SubnetworkMolecule>
+      <Label>Protein</Label>
+      <Id>4</Id>
+     </SubnetworkMolecule>
+     <Molecule>
+      <Label>P001</Label>
+      <Id>4</Id>
+     </Molecule>
+     <InternalNodes>
+      <InternalNode>
+       <Id>33</Id>
+       <Pos>480 96</Pos>
+      </InternalNode>
+     </InternalNodes>
+    </SubnetworkEdge>
+   </Edges>
+  </Subnetwork>
+  <Subnetwork>
+   <Label>Promoted Trans 001</Label>
+   <Id>14</Id>
+   <Pos>208 192</Pos>
+   <Network>
+    <Molecules>
+     <DNAMolecule>
+      <Label>Gene</Label>
+      <Id>1</Id>
+      <Pos>208 96</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DecayRate>0</DecayRate>
+      <Exported/>
+     </DNAMolecule>
+     <TranscriptionFactorMolecule>
+      <Label>Trans. Factor</Label>
+      <Id>2</Id>
+      <Pos>64 96</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DecayRate>0</DecayRate>
+      <Exported/>
+     </TranscriptionFactorMolecule>
+     <TranscriptionFactorMolecule>
+      <Label>Gene:TF</Label>
+      <Id>3</Id>
+      <Pos>352 96</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DecayRate>0</DecayRate>
+      <Exported/>
+     </TranscriptionFactorMolecule>
+     <TranscriptionFactorMolecule>
+      <Label>Protein</Label>
+      <Id>4</Id>
+      <Pos>576 96</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DecayRate>0</DecayRate>
+      <Exported/>
+     </TranscriptionFactorMolecule>
+    </Molecules>
+    <Subnetworks/>
+    <Reactions>
+     <MassActionReaction>
+      <Label>Complex Formation</Label>
+      <Id>5</Id>
+      <Pos>208 160</Pos>
+      <Kf>0.64612</Kf>
+      <Kr>1</Kr>
+      <Edges>
+       <ReactionEdge>
+        <Id>8</Id>
+        <Reactant>
+         <Label>Gene</Label>
+         <Id>1</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>9</Id>
+        <Reactant>
+         <Label>Trans. Factor</Label>
+         <Id>2</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>10</Id>
+        <Product>
+         <Label>Gene:TF</Label>
+         <Id>3</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+      </Edges>
+     </MassActionReaction>
+     <MassActionReaction>
+      <Label>Complex Disassociation</Label>
+      <Id>6</Id>
+      <Pos>208 32</Pos>
+      <Kf>1.47959</Kf>
+      <Kr>1</Kr>
+      <Edges>
+       <ReactionEdge>
+        <Id>11</Id>
+        <Reactant>
+         <Label>Gene:TF</Label>
+         <Id>3</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>12</Id>
+        <Product>
+         <Label>Gene</Label>
+         <Id>1</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>13</Id>
+        <Product>
+         <Label>Trans. Factor</Label>
+         <Id>2</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+      </Edges>
+     </MassActionReaction>
+     <MassActionReaction>
+      <Label>Translation</Label>
+      <Id>7</Id>
+      <Pos>464 96</Pos>
+      <Kf>0.228101</Kf>
+      <Kr>1</Kr>
+      <Edges>
+       <ReactionEdge>
+        <Id>14</Id>
+        <Reactant>
+         <Label>Gene:TF</Label>
+         <Id>3</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>15</Id>
+        <Product>
+         <Label>Gene:TF</Label>
+         <Id>3</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>16</Id>
+        <Product>
+         <Label>Protein</Label>
+         <Id>4</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+      </Edges>
+     </MassActionReaction>
+    </Reactions>
+   </Network>
+   <Edges>
+    <SubnetworkEdge>
+     <Id>34</Id>
+     <SubnetworkMolecule>
+      <Label>Gene</Label>
+      <Id>1</Id>
+     </SubnetworkMolecule>
+     <Molecule>
+      <Label>G001</Label>
+      <Id>3</Id>
+     </Molecule>
+    </SubnetworkEdge>
+    <SubnetworkEdge>
+     <Id>35</Id>
+     <SubnetworkMolecule>
+      <Label>Trans. Factor</Label>
+      <Id>2</Id>
+     </SubnetworkMolecule>
+     <Molecule>
+      <Label>P000</Label>
+      <Id>2</Id>
+     </Molecule>
+     <InternalNodes>
+      <InternalNode>
+       <Id>36</Id>
+       <Pos>128 224</Pos>
+      </InternalNode>
+     </InternalNodes>
+    </SubnetworkEdge>
+    <SubnetworkEdge>
+     <Id>37</Id>
+     <SubnetworkMolecule>
+      <Label>Gene:TF</Label>
+      <Id>3</Id>
+     </SubnetworkMolecule>
+     <Molecule>
+      <Label>G001:(P000)</Label>
+      <Id>6</Id>
+     </Molecule>
+    </SubnetworkEdge>
+    <SubnetworkEdge>
+     <Id>38</Id>
+     <SubnetworkMolecule>
+      <Label>Protein</Label>
+      <Id>4</Id>
+     </SubnetworkMolecule>
+     <Molecule>
+      <Label>P001</Label>
+      <Id>4</Id>
+     </Molecule>
+    </SubnetworkEdge>
+   </Edges>
+  </Subnetwork>
+  <Subnetwork>
+   <Label>Promoted Trans 000</Label>
+   <Id>15</Id>
+   <Pos>304 64</Pos>
+   <Network>
+    <Molecules>
+     <DNAMolecule>
+      <Label>Gene</Label>
+      <Id>1</Id>
+      <Pos>208 96</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DecayRate>0</DecayRate>
+      <Exported/>
+     </DNAMolecule>
+     <TranscriptionFactorMolecule>
+      <Label>Trans. Factor</Label>
+      <Id>2</Id>
+      <Pos>64 96</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DecayRate>0</DecayRate>
+      <Exported/>
+     </TranscriptionFactorMolecule>
+     <TranscriptionFactorMolecule>
+      <Label>Gene:TF</Label>
+      <Id>3</Id>
+      <Pos>352 96</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DecayRate>0</DecayRate>
+      <Exported/>
+     </TranscriptionFactorMolecule>
+     <TranscriptionFactorMolecule>
+      <Label>Protein</Label>
+      <Id>4</Id>
+      <Pos>576 96</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DecayRate>0</DecayRate>
+      <Exported/>
+     </TranscriptionFactorMolecule>
+    </Molecules>
+    <Subnetworks/>
+    <Reactions>
+     <MassActionReaction>
+      <Label>Complex Formation</Label>
+      <Id>5</Id>
+      <Pos>208 160</Pos>
+      <Kf>0.686199</Kf>
+      <Kr>1</Kr>
+      <Edges>
+       <ReactionEdge>
+        <Id>8</Id>
+        <Reactant>
+         <Label>Gene</Label>
+         <Id>1</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>9</Id>
+        <Reactant>
+         <Label>Trans. Factor</Label>
+         <Id>2</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>10</Id>
+        <Product>
+         <Label>Gene:TF</Label>
+         <Id>3</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+      </Edges>
+     </MassActionReaction>
+     <MassActionReaction>
+      <Label>Complex Disassociation</Label>
+      <Id>6</Id>
+      <Pos>208 32</Pos>
+      <Kf>0.0427279</Kf>
+      <Kr>1</Kr>
+      <Edges>
+       <ReactionEdge>
+        <Id>11</Id>
+        <Reactant>
+         <Label>Gene:TF</Label>
+         <Id>3</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>12</Id>
+        <Product>
+         <Label>Gene</Label>
+         <Id>1</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>13</Id>
+        <Product>
+         <Label>Trans. Factor</Label>
+         <Id>2</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+      </Edges>
+     </MassActionReaction>
+     <MassActionReaction>
+      <Label>Translation</Label>
+      <Id>7</Id>
+      <Pos>464 96</Pos>
+      <Kf>0.208268</Kf>
+      <Kr>1</Kr>
+      <Edges>
+       <ReactionEdge>
+        <Id>14</Id>
+        <Reactant>
+         <Label>Gene:TF</Label>
+         <Id>3</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>15</Id>
+        <Product>
+         <Label>Gene:TF</Label>
+         <Id>3</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>16</Id>
+        <Product>
+         <Label>Protein</Label>
+         <Id>4</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+      </Edges>
+     </MassActionReaction>
+    </Reactions>
+   </Network>
+   <Edges>
+    <SubnetworkEdge>
+     <Id>39</Id>
+     <SubnetworkMolecule>
+      <Label>Gene</Label>
+      <Id>1</Id>
+     </SubnetworkMolecule>
+     <Molecule>
+      <Label>G000</Label>
+      <Id>1</Id>
+     </Molecule>
+    </SubnetworkEdge>
+    <SubnetworkEdge>
+     <Id>40</Id>
+     <SubnetworkMolecule>
+      <Label>Trans. Factor</Label>
+      <Id>2</Id>
+     </SubnetworkMolecule>
+     <Molecule>
+      <Label>P001</Label>
+      <Id>4</Id>
+     </Molecule>
+     <InternalNodes>
+      <InternalNode>
+       <Id>41</Id>
+       <Pos>368 96</Pos>
+      </InternalNode>
+      <InternalNode>
+       <Id>42</Id>
+       <Pos>368 208</Pos>
+      </InternalNode>
+     </InternalNodes>
+    </SubnetworkEdge>
+    <SubnetworkEdge>
+     <Id>43</Id>
+     <SubnetworkMolecule>
+      <Label>Gene:TF</Label>
+      <Id>3</Id>
+     </SubnetworkMolecule>
+     <Molecule>
+      <Label>G000:(P001)</Label>
+      <Id>7</Id>
+     </Molecule>
+    </SubnetworkEdge>
+    <SubnetworkEdge>
+     <Id>44</Id>
+     <SubnetworkMolecule>
+      <Label>Protein</Label>
+      <Id>4</Id>
+     </SubnetworkMolecule>
+     <Molecule>
+      <Label>P000</Label>
+      <Id>2</Id>
+     </Molecule>
+     <InternalNodes>
+      <InternalNode>
+       <Id>45</Id>
+       <Pos>224 80</Pos>
+      </InternalNode>
+      <InternalNode>
+       <Id>46</Id>
+       <Pos>192 112</Pos>
+      </InternalNode>
+     </InternalNodes>
+    </SubnetworkEdge>
+   </Edges>
+  </Subnetwork>
+  <Subnetwork>
+   <Label>Complex Formation 003</Label>
+   <Id>16</Id>
+   <Pos>208 288</Pos>
+   <Network>
+    <Molecules>
+     <TranscriptionFactorMolecule>
+      <Label>Protein A</Label>
+      <Id>1</Id>
+      <Pos>100 32</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DecayRate>0</DecayRate>
+      <Exported/>
+     </TranscriptionFactorMolecule>
+     <TranscriptionFactorMolecule>
+      <Label>Protein B</Label>
+      <Id>2</Id>
+      <Pos>100 160</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DecayRate>0</DecayRate>
+      <Exported/>
+     </TranscriptionFactorMolecule>
+     <ComplexMolecule>
+      <Label>A:B</Label>
+      <Id>3</Id>
+      <Pos>244 96</Pos>
+      <InitialConcentration>0</InitialConcentration>
+      <DecayRate>0</DecayRate>
+      <Exported/>
+     </ComplexMolecule>
+    </Molecules>
+    <Subnetworks/>
+    <Reactions>
+     <MassActionReaction>
+      <Label>Complex Formation</Label>
+      <Id>4</Id>
+      <Pos>100 96</Pos>
+      <Kf>0.868585</Kf>
+      <Kr>1</Kr>
+      <Edges>
+       <ReactionEdge>
+        <Id>6</Id>
+        <Reactant>
+         <Label>Protein A</Label>
+         <Id>1</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>7</Id>
+        <Reactant>
+         <Label>Protein B</Label>
+         <Id>2</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+       <ReactionEdge>
+        <Id>8</Id>
+        <Product>
+         <Label>A:B</Label>
+         <Id>3</Id>
+        </Product>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+      </Edges>
+     </MassActionReaction>
+     <MassActionReaction>
+      <Label>Degradation</Label>
+      <Id>5</Id>
+      <Pos>356 96</Pos>
+      <Kf>0.927493</Kf>
+      <Kr>1</Kr>
+      <Edges>
+       <ReactionEdge>
+        <Id>9</Id>
+        <Reactant>
+         <Label>A:B</Label>
+         <Id>3</Id>
+        </Reactant>
+        <Coefficient>1</Coefficient>
+       </ReactionEdge>
+      </Edges>
+     </MassActionReaction>
+    </Reactions>
+   </Network>
+   <Edges>
+    <SubnetworkEdge>
+     <Id>47</Id>
+     <SubnetworkMolecule>
+      <Label>Protein A</Label>
+      <Id>1</Id>
+     </SubnetworkMolecule>
+     <Molecule>
+      <Label>P001</Label>
+      <Id>4</Id>
+     </Molecule>
+     <InternalNodes>
+      <InternalNode>
+       <Id>48</Id>
+       <Pos>432 288</Pos>
+      </InternalNode>
+      <InternalNode>
+       <Id>49</Id>
+       <Pos>432 208</Pos>
+      </InternalNode>
+     </InternalNodes>
+    </SubnetworkEdge>
+    <SubnetworkEdge>
+     <Id>50</Id>
+     <SubnetworkMolecule>
+      <Label>Protein B</Label>
+      <Id>2</Id>
+     </SubnetworkMolecule>
+     <Molecule>
+      <Label>P000</Label>
+      <Id>2</Id>
+     </Molecule>
+     <InternalNodes>
+      <InternalNode>
+       <Id>51</Id>
+       <Pos>128 304</Pos>
+      </InternalNode>
+     </InternalNodes>
+    </SubnetworkEdge>
+    <SubnetworkEdge>
+     <Id>52</Id>
+     <SubnetworkMolecule>
+      <Label>A:B</Label>
+      <Id>3</Id>
+     </SubnetworkMolecule>
+     <Molecule>
+      <Label>PC003_001</Label>
+      <Id>8</Id>
+     </Molecule>
+    </SubnetworkEdge>
+   </Edges>
+  </Subnetwork>
+ </Subnetworks>
+ <Reactions>
+  <MassActionReaction>
+   <Label>R-1</Label>
+   <Id>17</Id>
+   <Pos>480 256</Pos>
+   <Kf>10</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>53</Id>
+     <Reactant>
+      <Label>CV1</Label>
+      <Id>9</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>54</Id>
+     <Product>
+      <Label>P001</Label>
+      <Id>4</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>R-2</Label>
+   <Id>18</Id>
+   <Pos>80 112</Pos>
+   <Kf>10</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>55</Id>
+     <Reactant>
+      <Label>CV2</Label>
+      <Id>10</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>56</Id>
+     <Product>
+      <Label>P000</Label>
+      <Id>2</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+ </Reactions>
+</Network>

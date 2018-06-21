@@ -1,0 +1,73 @@
+Network file: n2.net
+
+Population size: 100
+# Must be even number if using 2pt crossover
+
+Work-unit size: 10
+# The number of individuals sent to each client
+
+Maximize fitness function: false
+# Must be true or false
+
+Elitism: true
+# Ensure best individual survives - Must be true / false
+
+Replace failures: true
+# Replace any individual whose fitness could not be computed
+# with a new random individual - Must be true / false
+
+Simplex size: 0
+# The number of top individuals to perform local area optimization on
+# using the simplex algorithm.  x<=0 => disable
+
+Time limit type: None
+# The interpretation of the time limit placed on generation - Must be None / Iteration / Timer
+# If limit type = Iteration => this is the maximum number of iterations the simplex will make
+# If limit type = Timer => this is the maximum amount of time the simplex method will take
+# If limit type = Timer && CS_Mode => this is the maximum amount of time allocated to the 
+#                                     generation including GA specific and Simplex
+
+Time limit: 180
+# The time limit in either seconds or iterations placed on the generation.
+# See "Time limit type" for more details
+
+Number of generations: 100
+# -1 => never end
+
+Selection pressure: 0.2
+
+Crossover type: NPt
+# Options are None, NPt, TwoPt
+
+Shift mutation range: 0.05
+# Shift values by +- 5%
+
+Save best interval: 1
+Save best prefix: best
+Print population interval: 0
+Print population stats interval: 1
+
+Population identity check interval: 1
+Population identity limit: 0.50
+
+Random seed: -1
+# -1 => generate one
+
+Integer parameters: false
+Parameter ranges:
+# Fields _MUST_ be separated by tabs
+# Original model
+#    0	R1                  	A --> B + 2C                                                                    	0.200000
+#    1	R2                  	B + 2C --> A                                                                    	0.100000
+#    2	R3                  	B --> C                                                                         	0.100000
+# Reactions
+# RxnName	Index into param table	Rxn Equation	Kinetic value
+R1	0		# A --> B + 2C                                                	0.200000
+R2	1		# B + 2C --> A                                                	0.100000
+R3	2		# B --> C                                                     	0.100000
+# Parameters
+# Param Index	Min	Max			-or-
+# Param Index	Fixed Value
+0	0.000000	1000000.000000	# 0.200000
+1	0.000000	1000000.000000	# 0.100000
+2	0.000000	1000000.000000	# 0.100000

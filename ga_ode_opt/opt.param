@@ -1,0 +1,141 @@
+Network file: gal4.net
+
+Population size: 100
+# Must be even number if using 2pt crossover
+
+Work-unit size: 10
+# The number of individuals sent to each client
+
+Maximize fitness function: false
+# Must be true or false
+
+Elitism: true
+# Ensure best individual survives - Must be true / false
+
+Replace failures: true
+# Replace any individual whose fitness could not be computed
+# with a new random individual - Must be true / false
+
+Simplex size: 1
+# The number of top individuals to perform local area optimization on
+# using the simplex algorithm.  x<=0 => disable
+
+Time limit type: Timer
+# The interpretation of the time limit placed on generation - Must be None / Iteration / Timer
+# If limit type = Iteration => this is the maximum number of iterations the simplex will make
+# If limit type = Timer => this is the maximum amount of time the simplex method will take
+# If limit type = Timer && CS_Mode => this is the maximum amount of time allocated to the 
+#                                     generation including GA specific and Simplex
+
+Time limit: 180
+# The time limit in either seconds or iterations placed on the generation.
+# See "Time limit type" for more details
+
+Number of generations: 100
+# -1 => never end
+
+Selection pressure: 0.2
+
+Crossover type: NPt
+# Options are None, NPt, TwoPt
+
+Shift mutation range: 0.05
+# Shift values by +- 5%
+
+Save best interval: 1
+Save best prefix: best
+Print population interval: 0
+Print population stats interval: 1
+
+Population identity check interval: 1
+Population identity limit: 0.50
+
+Random seed: -1
+# -1 => generate one
+
+Integer parameters: false
+Parameter ranges:
+# Fields _MUST_ be separated by tabs
+# Original model
+#    0	Gal80p              	Gal80p --> 0                                                                    	50.000000
+#    1	Gal4p               	Gal4p --> 0                                                                     	36.000000
+#    2	Gal3p               	Gal3p --> 0                                                                     	40.000000
+#    3	Glu                 	Glu --> 0                                                                       	50.000000
+#    4	Gal1-2-5-7-10p      	Gal1-2-5-7-10p --> 0                                                            	82.000000
+#    5	R1                  	GalExt --> Gal                                                                  	1.000000
+#    6	R2                  	Gal1-2-5-7-10p + GalExt --> Gal + Gal1-2-5-7-10p                                	6.000000
+#    7	R3                  	Gal1-2-5-7-10p + Gal --> Glu-6P + Gal1-2-5-7-10p                                	12.000000
+#    8	R4                  	Glu-6P --> Glu                                                                  	100.000000
+#    9	R5                  	Glu + gal4g --> gal4gX + Glu                                                    	10.000000
+#   10	R6                  	gal4gX --> gal4g                                                                	1.000000
+#   11	R7                  	gal4g --> gal4g + Gal4p                                                         	23.000000
+#   12/13	R8/R9               	GAL + Gal4p <-> GAL-4                                                           	9.000000
+#   14/15	R10/R11             	GAL-4 + Gal80p <-> GAL-4-80                                                     	4.000000
+#   16	R12                 	Gal3p* + GAL-4-80 --> GAL-4-80-3 + Gal3p*                                       	8.000000
+#   17	R13                 	GAL-4-80-3 --> GAL-4-80                                                         	10.000000
+#   18	R14                 	GAL-4 --> GAL-4 + Gal80p                                                        	101.000000
+#   19	R15                 	GAL-4 --> GAL-4 + Gal3p                                                         	2.000000
+#   20	R16                 	GAL-4-80-3 --> GAL-4-80-3 + Gal80p                                              	338.000000
+#   21	R17                 	GAL-4-80-3 --> GAL-4-80-3 + Gal3p                                               	309.000000
+#   22	R18                 	GAL-4-80-3 --> GAL-4-80-3 + Gal1-2-5-7-10p                                      	336.000000
+#   23	R19                 	GAL-4 --> GAL-4 + Gal1-2-5-7-10p                                                	19.000000
+#   24	R20                 	GluExt --> Glu                                                                  	10.000000
+#   25	R26                 	Gal + Gal3p --> Gal + Gal3p*                                                    	1320.000000
+#   26	R27                 	Gal3p* --> Gal3p                                                                	809.000000
+# Reactions
+# RxnName	Index into param table	Rxn Equation	Kinetic value
+Gal80p	0		# Gal80p --> 0                                                	50.000000
+Gal4p	0		# Gal4p --> 0                                                 	36.000000
+Gal3p	0		# Gal3p --> 0                                                 	40.000000
+Glu	0		# Glu --> 0                                                   	50.000000
+Gal1-2-5-7-10p	0		# Gal1-2-5-7-10p --> 0                                        	82.000000
+R1	5		# GalExt --> Gal                                              	1.000000
+R2	6		# Gal1-2-5-7-10p + GalExt --> Gal + Gal1-2-5-7-10p            	6.000000
+R3	7		# Gal1-2-5-7-10p + Gal --> Glu-6P + Gal1-2-5-7-10p            	12.000000
+R4	8		# Glu-6P --> Glu                                              	100.000000
+R5	9		# Glu + gal4g --> gal4gX + Glu                                	10.000000
+R6	10		# gal4gX --> gal4g                                            	1.000000
+R7	11		# gal4g --> gal4g + Gal4p                                     	23.000000
+R8/R9	12	13	# GAL + Gal4p <-> GAL-4                                       	9.000000
+R10/R11	14	15	# GAL-4 + Gal80p <-> GAL-4-80                                 	4.000000
+R12	16		# Gal3p* + GAL-4-80 --> GAL-4-80-3 + Gal3p*                   	8.000000
+R13	17		# GAL-4-80-3 --> GAL-4-80                                     	10.000000
+R14	18		# GAL-4 --> GAL-4 + Gal80p                                    	101.000000
+R15	19		# GAL-4 --> GAL-4 + Gal3p                                     	2.000000
+R16	20		# GAL-4-80-3 --> GAL-4-80-3 + Gal80p                          	338.000000
+R17	21		# GAL-4-80-3 --> GAL-4-80-3 + Gal3p                           	309.000000
+R18	22		# GAL-4-80-3 --> GAL-4-80-3 + Gal1-2-5-7-10p                  	336.000000
+R19	23		# GAL-4 --> GAL-4 + Gal1-2-5-7-10p                            	19.000000
+R20	24		# GluExt --> Glu                                              	10.000000
+R26	25		# Gal + Gal3p --> Gal + Gal3p*                                	1320.000000
+R27	26		# Gal3p* --> Gal3p                                            	809.000000
+# Parameters
+# Param Index	Min	Max			-or-
+# Param Index	Fixed Value
+0	0.000000	100.000000	# 50.000000
+1	0.0	123.000000	# 36.000000
+2	0.000000	2000.000000	# 40.000000
+3	0.000000	3000.000000	# 50.000000
+4	0.000000	4000.000000	# 82.000000
+5	0.000000	5000.000000	# 1.000000
+6	0.000000	6000.000000	# 6.000000
+7	432	# 12.000000
+8	0.000000	7000.000000	# 100.000000
+9	0.000000	8000.000000	# 10.000000
+10	0.000000	9000.000000	# 1.000000
+11	0.000000	1000.000000	# 23.000000
+12	0.000000	1100.000000	# 7.000000
+13	0.000000	1200.000000	# 9.000000
+14	0.000000	1300.000000	# 4.000000
+15	0.000000	1400.000000	# 4.000000
+16	0.000000	1500.000000	# 8.000000
+17	0.000000	1600.000000	# 10.000000
+18	0.000000	1700.000000	# 101.000000
+19	0.000000	1800.000000	# 2.000000
+20	0.000000	1900.000000	# 338.000000
+21	0.000000	2000.000000	# 309.000000
+22	0.000000	2100.000000	# 336.000000
+23	0.000000	2200.000000	# 19.000000
+24	0.000000	2300.000000	# 10.000000
+25	0.000000	2400.000000	# 1320.000000
+26	0.000000	2500.000000	# 809.000000

@@ -1,0 +1,11 @@
+//test
+R1: pro_u_rbsA_v --> pro_u_rbsA_v + mRNA_rbsA_v [0.1]
+R2: mRNA_rbsA_v -->  [0.3]
+R3: mRNA_rbsA_v --> mRNA_rbsA_v + protein_v [0.2]
+R4: protein_v -->  [0.4]
+R5: pro_v_rbsB_u --> pro_v_rbsB_u + mRNA_rbsB_u [0.2]
+R6: mRNA_rbsB_u -->  [0.1]
+R7: mRNA_rbsB_u --> mRNA_rbsB_u + protein_u [0.4]
+R8: protein_u -->  [0.2]
+R9: pro_v_rbsB_u + protein_v <--> pro_v_rbsB_u-protein_v [0.2,0.05]
+R10: pro_u_rbsA_v + protein_u <--> pro_u_rbsA_v-protein_u [0.2,0.1]

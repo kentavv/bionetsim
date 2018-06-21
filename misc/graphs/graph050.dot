@@ -1,0 +1,17 @@
+Graph G050 {
+  A [shape=circle];
+  B [shape=circle];
+  C [shape=circle];
+  D [shape=circle];
+  E [shape=circle];
+  A -- B;
+  A -- C;
+  A -- D;
+  A -- E;
+  B -- C;
+  B -- D;
+  B -- E;
+  C -- D;
+  C -- E;
+  D -- E;
+}

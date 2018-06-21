@@ -1,0 +1,9 @@
+Graph G009 {
+  A [shape=circle];
+  B [shape=circle];
+  C [shape=circle];
+  D [shape=circle];
+  A -- D;
+  B -- D;
+  C -- D;
+}

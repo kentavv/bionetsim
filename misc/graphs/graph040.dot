@@ -1,0 +1,12 @@
+Graph G040 {
+  A [shape=circle];
+  B [shape=circle];
+  C [shape=circle];
+  D [shape=circle];
+  E [shape=circle];
+  A -- C;
+  A -- D;
+  B -- D;
+  B -- E;
+  C -- E;
+}

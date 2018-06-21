@@ -1,0 +1,311 @@
+<?xml version="1.0" standalone="yes"?>
+<Network>
+ <Info>
+  <Program>Network Editor 0.07 devel</Program>
+  <Format>19</Format>
+  <SaveDateTime>Mon Oct 13 13:57:49 2003</SaveDateTime>
+  <Version>8</Version>
+ </Info>
+ <Editor>
+  <GridSpacing>16 16</GridSpacing>
+  <SnapToGrid/>
+  <DisplayGrid/>
+  <DrawLabel/>
+  <DrawIcon/>
+ </Editor>
+ <Fitness>
+  <Function>Null</Function>
+ </Fitness>
+ <Simulation>
+  <SimulationMethod>ODE</SimulationMethod>
+  <TimeBegin>0</TimeBegin>
+  <TimeEnd>40</TimeEnd>
+  <TimeStepSize>0.1</TimeStepSize>
+  <SteadyStateTolerance>1e-06</SteadyStateTolerance>
+  <AbsoluteTolerance>1e-08</AbsoluteTolerance>
+  <RelativeTolerance>0.0001</RelativeTolerance>
+  <MaxStep>1</MaxStep>
+  <MinStep>0</MinStep>
+  <Environments>
+   <Environment>Environment 1</Environment>
+   <Environment>Environment 2</Environment>
+   <Environment>Environment 3</Environment>
+   <Environment>Environment 4</Environment>
+   <Environment current="true" >Environment 5</Environment>
+  </Environments>
+  <NumReplicates>20</NumReplicates>
+  <HistogramUpdateRate>-1</HistogramUpdateRate>
+ </Simulation>
+ <Molecules>
+  <SquareWaveControlVariable>
+   <Label>A</Label>
+   <Id>1</Id>
+   <Pos>384 256</Pos>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <Parameters>
+    <Number>0</Number>
+    <Values>10 10</Values>
+    <Duration>10 10</Duration>
+    <TransitionTime>2 2</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+   <Parameters>
+    <Number>1</Number>
+    <Values>10 10</Values>
+    <Duration>10 10</Duration>
+    <TransitionTime>2 2</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+   <Parameters>
+    <Number>2</Number>
+    <Values>1 1</Values>
+    <Duration>10 10</Duration>
+    <TransitionTime>2 2</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+   <Parameters>
+    <Number>3</Number>
+    <Values>1 1</Values>
+    <Duration>10 10</Duration>
+    <TransitionTime>2 2</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+   <Parameters>
+    <Number>4</Number>
+    <Values>0 10</Values>
+    <Duration>10 10</Duration>
+    <TransitionTime>0 0</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+  </SquareWaveControlVariable>
+  <SquareWaveControlVariable>
+   <Label>B</Label>
+   <Id>2</Id>
+   <Pos>368 480</Pos>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <Parameters>
+    <Number>0</Number>
+    <Values>10 10</Values>
+    <Duration>10 10</Duration>
+    <TransitionTime>2 2</TransitionTime>
+    <PhaseShift>12</PhaseShift>
+   </Parameters>
+   <Parameters>
+    <Number>1</Number>
+    <Values>1 1</Values>
+    <Duration>10 10</Duration>
+    <TransitionTime>2 2</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+   <Parameters>
+    <Number>2</Number>
+    <Values>10 10</Values>
+    <Duration>10 10</Duration>
+    <TransitionTime>2 2</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+   <Parameters>
+    <Number>3</Number>
+    <Values>1 1</Values>
+    <Duration>10 10</Duration>
+    <TransitionTime>2 2</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+   <Parameters>
+    <Number>4</Number>
+    <Values>0 10</Values>
+    <Duration>20 20</Duration>
+    <TransitionTime>0 0</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+  </SquareWaveControlVariable>
+  <DNAMolecule>
+   <Label>NOT A g X</Label>
+   <Id>3</Id>
+   <Pos>496 224</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+   <NotPlotted/>
+  </DNAMolecule>
+  <DNAMolecule>
+   <Label>g2</Label>
+   <Id>4</Id>
+   <Pos>480 432</Pos>
+   <InitialConcentration>1</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <DNAMolecule>
+   <Label>NOT A g</Label>
+   <Id>5</Id>
+   <Pos>496 304</Pos>
+   <InitialConcentration>1</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <DNAMolecule>
+   <Label>g2X</Label>
+   <Id>6</Id>
+   <Pos>480 528</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <EnzymeMolecule>
+   <Label>NOT A</Label>
+   <Id>7</Id>
+   <Pos>656 304</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>10</DecayRate>
+   <Decays/>
+  </EnzymeMolecule>
+  <EnzymeMolecule>
+   <Label>p2</Label>
+   <Id>8</Id>
+   <Pos>640 432</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>1</DecayRate>
+   <Decays/>
+  </EnzymeMolecule>
+ </Molecules>
+ <Subnetworks/>
+ <Reactions>
+  <MassActionReaction>
+   <Label>Rxn 1</Label>
+   <Id>12</Id>
+   <Pos>576 304</Pos>
+   <Kf>100</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>9</Id>
+     <Reactant>
+      <Label>NOT A g</Label>
+      <Id>5</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>10</Id>
+     <Product>
+      <Label>NOT A</Label>
+      <Id>7</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>11</Id>
+     <Product>
+      <Label>NOT A g</Label>
+      <Id>5</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>Rxn 2</Label>
+   <Id>16</Id>
+   <Pos>560 432</Pos>
+   <Kf>10</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>13</Id>
+     <Reactant>
+      <Label>g2</Label>
+      <Id>4</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>14</Id>
+     <Product>
+      <Label>g2</Label>
+      <Id>4</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>15</Id>
+     <Product>
+      <Label>p2</Label>
+      <Id>8</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>Rxn 3</Label>
+   <Id>20</Id>
+   <Pos>480 480</Pos>
+   <Kf>10</Kf>
+   <Kr>10</Kr>
+   <Reversible/>
+   <Edges>
+    <ReactionEdge>
+     <Id>17</Id>
+     <Reactant>
+      <Label>g2</Label>
+      <Id>4</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>18</Id>
+     <Reactant>
+      <Label>B</Label>
+      <Id>2</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>19</Id>
+     <Product>
+      <Label>g2X</Label>
+      <Id>6</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>repression 1</Label>
+   <Id>24</Id>
+   <Pos>496 256</Pos>
+   <Kf>10</Kf>
+   <Kr>10</Kr>
+   <Reversible/>
+   <Edges>
+    <ReactionEdge>
+     <Id>21</Id>
+     <Reactant>
+      <Label>NOT A g</Label>
+      <Id>5</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>22</Id>
+     <Product>
+      <Label>NOT A g X</Label>
+      <Id>3</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>23</Id>
+     <Reactant>
+      <Label>A</Label>
+      <Id>1</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+ </Reactions>
+</Network>

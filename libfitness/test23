@@ -1,0 +1,12 @@
+int
+main() {
+  string a, b;
+  a = "asdf";
+  b = "123";
+  a == a;
+  a < a;
+  a == b;
+  a != b;
+  a < b;
+  a > b;
+}

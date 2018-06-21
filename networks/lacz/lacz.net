@@ -1,0 +1,270 @@
+<?xml version="1.0" standalone="yes"?>
+<Network>
+ <Info>
+  <Program>Network Editor 0.07 devel</Program>
+  <Format>19</Format>
+  <SaveDateTime>Mon Oct 13 13:57:50 2003</SaveDateTime>
+  <Version>17</Version>
+ </Info>
+ <Editor>
+  <GridSpacing>5 5</GridSpacing>
+  <SnapToGrid/>
+  <DrawLabel/>
+  <DrawIcon/>
+ </Editor>
+ <Fitness>
+  <Function>Null</Function>
+ </Fitness>
+ <Simulation>
+  <SimulationMethod>ODE</SimulationMethod>
+  <TimeBegin>0</TimeBegin>
+  <TimeEnd>100</TimeEnd>
+  <TimeStepSize>0.1</TimeStepSize>
+  <SteadyStateTolerance>1e-06</SteadyStateTolerance>
+  <AbsoluteTolerance>1e-08</AbsoluteTolerance>
+  <RelativeTolerance>0.0001</RelativeTolerance>
+  <MaxStep>1</MaxStep>
+  <MinStep>0</MinStep>
+  <Environments>
+   <Environment>Environment 1</Environment>
+   <Environment current="true" >Environment 2</Environment>
+  </Environments>
+  <NumReplicates>20</NumReplicates>
+  <HistogramUpdateRate>-1</HistogramUpdateRate>
+ </Simulation>
+ <Molecules>
+  <DNAMolecule>
+   <Label>CAPbs</Label>
+   <Id>1</Id>
+   <Pos>148 249</Pos>
+   <InitialConcentration>1</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <DNAMolecule>
+   <Label>Pro</Label>
+   <Id>2</Id>
+   <Pos>364 249</Pos>
+   <InitialConcentration>1</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <ComplexMolecule>
+   <Label>CAP_CAPbs</Label>
+   <Id>3</Id>
+   <Pos>191 364</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </ComplexMolecule>
+  <ComplexMolecule>
+   <Label>Basal</Label>
+   <Id>4</Id>
+   <Pos>364 364</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </ComplexMolecule>
+  <ComplexMolecule>
+   <Label>Induced</Label>
+   <Id>5</Id>
+   <Pos>276 475</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </ComplexMolecule>
+  <EnzymeMolecule>
+   <Label>Z</Label>
+   <Id>6</Id>
+   <Pos>569 371</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>1</DecayRate>
+  </EnzymeMolecule>
+  <SquareWaveControlVariable>
+   <Label>CAP</Label>
+   <Id>7</Id>
+   <Pos>222 246</Pos>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <Parameters>
+    <Number>0</Number>
+    <Values>0 10</Values>
+    <Duration>45 45</Duration>
+    <TransitionTime>5 5</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+   <Parameters>
+    <Number>1</Number>
+    <Values>1000 100</Values>
+    <Duration>100 30</Duration>
+    <TransitionTime>5 5</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+  </SquareWaveControlVariable>
+ </Molecules>
+ <Subnetworks/>
+ <Reactions>
+  <MassActionReaction>
+   <Label>Rxn 1</Label>
+   <Id>11</Id>
+   <Pos>192 301</Pos>
+   <Kf>10</Kf>
+   <Kr>200</Kr>
+   <Reversible/>
+   <Notes>CAP binds to the CAP Binding site</Notes>
+   <Edges>
+    <ReactionEdge>
+     <Id>8</Id>
+     <Reactant>
+      <Label>CAPbs</Label>
+      <Id>1</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>9</Id>
+     <Product>
+      <Label>CAP_CAPbs</Label>
+      <Id>3</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>10</Id>
+     <Reactant>
+      <Label>CAP</Label>
+      <Id>7</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>Rxn 2</Label>
+   <Id>14</Id>
+   <Pos>362 300</Pos>
+   <Kf>0.01</Kf>
+   <Kr>200</Kr>
+   <Reversible/>
+   <Edges>
+    <ReactionEdge>
+     <Id>12</Id>
+     <Reactant>
+      <Label>Pro</Label>
+      <Id>2</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>13</Id>
+     <Product>
+      <Label>Basal</Label>
+      <Id>4</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>Rxn 3_1</Label>
+   <Id>18</Id>
+   <Pos>457 371</Pos>
+   <Kf>10</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>15</Id>
+     <Reactant>
+      <Label>Basal</Label>
+      <Id>4</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>16</Id>
+     <Product>
+      <Label>Basal</Label>
+      <Id>4</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>17</Id>
+     <Product>
+      <Label>Z</Label>
+      <Id>6</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>Rxn 4</Label>
+   <Id>22</Id>
+   <Pos>272 434</Pos>
+   <Kf>200</Kf>
+   <Kr>1</Kr>
+   <Reversible/>
+   <Edges>
+    <ReactionEdge>
+     <Id>19</Id>
+     <Reactant>
+      <Label>CAP_CAPbs</Label>
+      <Id>3</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>20</Id>
+     <Reactant>
+      <Label>Basal</Label>
+      <Id>4</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>21</Id>
+     <Product>
+      <Label>Induced</Label>
+      <Id>5</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>Rxn 3_2</Label>
+   <Id>26</Id>
+   <Pos>458 473</Pos>
+   <Kf>10</Kf>
+   <Kr>1</Kr>
+   <Notes>Should be the same parameter as the basal expression rate. </Notes>
+   <Edges>
+    <ReactionEdge>
+     <Id>23</Id>
+     <Reactant>
+      <Label>Induced</Label>
+      <Id>5</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>24</Id>
+     <Product>
+      <Label>Z</Label>
+      <Id>6</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>25</Id>
+     <Product>
+      <Label>Induced</Label>
+      <Id>5</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+ </Reactions>
+</Network>

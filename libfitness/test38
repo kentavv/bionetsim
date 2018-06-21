@@ -1,0 +1,10 @@
+int
+main() {
+  int a[2,3];
+  int b[2,3];
+
+  b = a;
+
+  print << "Hello\n";
+}
+

@@ -1,0 +1,6 @@
+Graph G006 {
+  A [shape=circle];
+  B [shape=circle];
+  C [shape=circle];
+  D [shape=circle];
+}

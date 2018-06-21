@@ -1,0 +1,11 @@
+Graph G037 {
+  A [shape=circle];
+  B [shape=circle];
+  C [shape=circle];
+  D [shape=circle];
+  E [shape=circle];
+  A -- C;
+  A -- E;
+  B -- D;
+  C -- E;
+}

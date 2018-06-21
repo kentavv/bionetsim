@@ -1,0 +1,587 @@
+<?xml version="1.0" standalone="yes"?>
+<Network>
+ <Info>
+  <Program>Network Editor 0.07 devel</Program>
+  <Format>20</Format>
+  <SaveDateTime>Thu Jan 22 14:17:45 2004</SaveDateTime>
+  <Version>2</Version>
+ </Info>
+ <Editor>
+  <GridSpacing>20 20</GridSpacing>
+  <SnapToGrid/>
+  <Grid display="false" />
+  <Labels display="true" />
+  <Icon display="false" />
+ </Editor>
+ <Fitness>
+  <Function>FT5</Function>
+ </Fitness>
+ <Simulation>
+  <SimulationMethod>ODE</SimulationMethod>
+  <TimeBegin>0</TimeBegin>
+  <TimeEnd>200</TimeEnd>
+  <TimeStepSize>0.1</TimeStepSize>
+  <SteadyStateTolerance>1e-006</SteadyStateTolerance>
+  <AbsoluteTolerance>1e-008</AbsoluteTolerance>
+  <RelativeTolerance>0.0001</RelativeTolerance>
+  <MaxStep>1</MaxStep>
+  <MinStep>0</MinStep>
+  <Environments>
+   <Environment current="true" >Environment 1</Environment>
+  </Environments>
+  <NumReplicates>20</NumReplicates>
+  <HistogramUpdateRate>-1</HistogramUpdateRate>
+ </Simulation>
+ <Molecules>
+  <DNAMolecule>
+   <Label>TOC1gX CCA1</Label>
+   <Id>1</Id>
+   <Pos>413 18</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <DNAMolecule>
+   <Label>TOC1gX LHY</Label>
+   <Id>2</Id>
+   <Pos>533 18</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <DNAMolecule>
+   <Label>TOC1g</Label>
+   <Id>3</Id>
+   <Pos>473 138</Pos>
+   <InitialConcentration>1</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <DNAMolecule>
+   <Label>CCA1g</Label>
+   <Id>4</Id>
+   <Pos>193 198</Pos>
+   <InitialConcentration>1</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <DNAMolecule>
+   <Label>LHYg</Label>
+   <Id>5</Id>
+   <Pos>753 198</Pos>
+   <InitialConcentration>1</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </DNAMolecule>
+  <TranscriptionFactorMolecule>
+   <Label>TOC1</Label>
+   <Id>6</Id>
+   <Pos>473 258</Pos>
+   <InitialConcentration>2</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </TranscriptionFactorMolecule>
+  <TranscriptionFactorMolecule>
+   <Label>CCA1</Label>
+   <Id>7</Id>
+   <Pos>193 318</Pos>
+   <InitialConcentration>2</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+   <Notes>reinforced by light</Notes>
+  </TranscriptionFactorMolecule>
+  <TranscriptionFactorMolecule>
+   <Label>LHY</Label>
+   <Id>8</Id>
+   <Pos>753 318</Pos>
+   <InitialConcentration>2</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+   <Notes>reinforced by light
+clock &quot;reset&quot; by light
+</Notes>
+  </TranscriptionFactorMolecule>
+  <SquareWaveControlVariable>
+   <Label>Light</Label>
+   <Id>9</Id>
+   <Pos>473 438</Pos>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <Parameters>
+    <Number>0</Number>
+    <Values>1 1</Values>
+    <Duration>1000 10</Duration>
+    <TransitionTime>2 2</TransitionTime>
+    <PhaseShift>0</PhaseShift>
+   </Parameters>
+  </SquareWaveControlVariable>
+  <ComplexMolecule>
+   <Label>CCA1p</Label>
+   <Id>10</Id>
+   <Pos>193 498</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </ComplexMolecule>
+  <ComplexMolecule>
+   <Label>LHYp</Label>
+   <Id>11</Id>
+   <Pos>753 498</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </ComplexMolecule>
+  <ComplexMolecule>
+   <Label>TOC1_decay</Label>
+   <Id>12</Id>
+   <Pos>473 378</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </ComplexMolecule>
+  <ComplexMolecule>
+   <Label>LHY_decay</Label>
+   <Id>13</Id>
+   <Pos>841 500</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </ComplexMolecule>
+  <ComplexMolecule>
+   <Label>CCA1_decay</Label>
+   <Id>14</Id>
+   <Pos>101 500</Pos>
+   <InitialConcentration>0</InitialConcentration>
+   <DefaultCoefficient>1</DefaultCoefficient>
+   <DecayRate>0</DecayRate>
+  </ComplexMolecule>
+ </Molecules>
+ <Subnetworks/>
+ <Reactions>
+  <MassActionReaction>
+   <Label>Rxn 1</Label>
+   <Id>18</Id>
+   <Pos>473 198</Pos>
+   <Kf>10</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>15</Id>
+     <Reactant>
+      <Label>TOC1g</Label>
+      <Id>3</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>16</Id>
+     <Product>
+      <Label>TOC1g</Label>
+      <Id>3</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>17</Id>
+     <Product>
+      <Label>TOC1</Label>
+      <Id>6</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>Rxn 2</Label>
+   <Id>24</Id>
+   <Pos>413 78</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Reversible/>
+   <Edges>
+    <ReactionEdge>
+     <Id>19</Id>
+     <Reactant>
+      <Label>TOC1g</Label>
+      <Id>3</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>20</Id>
+     <Product>
+      <Label>TOC1gX CCA1</Label>
+      <Id>1</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>21</Id>
+     <Reactant>
+      <Label>CCA1</Label>
+      <Id>7</Id>
+     </Reactant>
+     <Coefficient>2</Coefficient>
+     <InternalNodes>
+      <InternalNode>
+       <Id>22</Id>
+       <Pos>73 318</Pos>
+      </InternalNode>
+      <InternalNode>
+       <Id>23</Id>
+       <Pos>73 78</Pos>
+      </InternalNode>
+     </InternalNodes>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>Rxn 3</Label>
+   <Id>30</Id>
+   <Pos>533 78</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Reversible/>
+   <Edges>
+    <ReactionEdge>
+     <Id>25</Id>
+     <Reactant>
+      <Label>TOC1g</Label>
+      <Id>3</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>26</Id>
+     <Product>
+      <Label>TOC1gX LHY</Label>
+      <Id>2</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>27</Id>
+     <Reactant>
+      <Label>LHY</Label>
+      <Id>8</Id>
+     </Reactant>
+     <Coefficient>2</Coefficient>
+     <InternalNodes>
+      <InternalNode>
+       <Id>28</Id>
+       <Pos>873 318</Pos>
+      </InternalNode>
+      <InternalNode>
+       <Id>29</Id>
+       <Pos>873 78</Pos>
+      </InternalNode>
+     </InternalNodes>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>Rxn 4</Label>
+   <Id>36</Id>
+   <Pos>193 258</Pos>
+   <Kf>10</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>31</Id>
+     <Reactant>
+      <Label>CCA1g</Label>
+      <Id>4</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>32</Id>
+     <Product>
+      <Label>CCA1g</Label>
+      <Id>4</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>33</Id>
+     <Product>
+      <Label>CCA1</Label>
+      <Id>7</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>34</Id>
+     <Reactant>
+      <Label>TOC1</Label>
+      <Id>6</Id>
+     </Reactant>
+     <Coefficient>2</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>35</Id>
+     <Product>
+      <Label>TOC1</Label>
+      <Id>6</Id>
+     </Product>
+     <Coefficient>2</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>Rxn 5</Label>
+   <Id>42</Id>
+   <Pos>753 258</Pos>
+   <Kf>10</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>37</Id>
+     <Reactant>
+      <Label>LHYg</Label>
+      <Id>5</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>38</Id>
+     <Product>
+      <Label>LHYg</Label>
+      <Id>5</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>39</Id>
+     <Product>
+      <Label>LHY</Label>
+      <Id>8</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>40</Id>
+     <Reactant>
+      <Label>TOC1</Label>
+      <Id>6</Id>
+     </Reactant>
+     <Coefficient>2</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>41</Id>
+     <Product>
+      <Label>TOC1</Label>
+      <Id>6</Id>
+     </Product>
+     <Coefficient>2</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>Rxn 6</Label>
+   <Id>46</Id>
+   <Pos>193 438</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>43</Id>
+     <Reactant>
+      <Label>Light</Label>
+      <Id>9</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>44</Id>
+     <Reactant>
+      <Label>CCA1</Label>
+      <Id>7</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>45</Id>
+     <Product>
+      <Label>CCA1p</Label>
+      <Id>10</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>Rxn 7</Label>
+   <Id>50</Id>
+   <Pos>753 438</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>47</Id>
+     <Reactant>
+      <Label>Light</Label>
+      <Id>9</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>48</Id>
+     <Reactant>
+      <Label>LHY</Label>
+      <Id>8</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>49</Id>
+     <Product>
+      <Label>LHYp</Label>
+      <Id>11</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>Rxn 8</Label>
+   <Id>53</Id>
+   <Pos>473 318</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>51</Id>
+     <Reactant>
+      <Label>TOC1</Label>
+      <Id>6</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>52</Id>
+     <Product>
+      <Label>TOC1_decay</Label>
+      <Id>12</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>Rxn 9</Label>
+   <Id>56</Id>
+   <Pos>841 440</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>54</Id>
+     <Reactant>
+      <Label>LHY</Label>
+      <Id>8</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>55</Id>
+     <Product>
+      <Label>LHY_decay</Label>
+      <Id>13</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>Rxn 10</Label>
+   <Id>59</Id>
+   <Pos>101 440</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>57</Id>
+     <Product>
+      <Label>CCA1_decay</Label>
+      <Id>14</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>58</Id>
+     <Reactant>
+      <Label>CCA1</Label>
+      <Id>7</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>Rxn 1</Label>
+   <Id>63</Id>
+   <Pos>120 260</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>60</Id>
+     <Reactant>
+      <Label>CCA1g</Label>
+      <Id>4</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>61</Id>
+     <Product>
+      <Label>CCA1g</Label>
+      <Id>4</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>62</Id>
+     <Product>
+      <Label>CCA1</Label>
+      <Id>7</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+  <MassActionReaction>
+   <Label>Rxn 2</Label>
+   <Id>67</Id>
+   <Pos>820 260</Pos>
+   <Kf>1</Kf>
+   <Kr>1</Kr>
+   <Edges>
+    <ReactionEdge>
+     <Id>64</Id>
+     <Reactant>
+      <Label>LHYg</Label>
+      <Id>5</Id>
+     </Reactant>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>65</Id>
+     <Product>
+      <Label>LHY</Label>
+      <Id>8</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+    <ReactionEdge>
+     <Id>66</Id>
+     <Product>
+      <Label>LHYg</Label>
+      <Id>5</Id>
+     </Product>
+     <Coefficient>1</Coefficient>
+    </ReactionEdge>
+   </Edges>
+  </MassActionReaction>
+ </Reactions>
+</Network>

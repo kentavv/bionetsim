@@ -1,0 +1,42 @@
+Population size: 100
+# Must be even number if using 2pt crossover
+
+Maximize fitness function: flase
+# Must be true or false
+
+Elitism: false
+# Ensure best individual survives - Must be true / false
+
+Replace failures: true
+# Replace any individual whose fitness could not be computed
+# with a new random individual - Must be true / false
+
+Simplex size: 0
+# The number of top individuals to perform local area optimization on
+# using the simplex algorithm.  x<=0 => disable
+
+Number of generations: 100
+# -1 => never end
+
+Selection pressure: 0.40
+
+Crossover type: NPt
+# Options are None, NPt, TwoPt
+
+Shift mutation range: 0.05
+# Shift values by +- 5%
+
+Save best interval: 3
+Save best prefix: best
+Print population interval: 0
+Print population stats interval: 1
+
+Population identity check interval: 0
+Population identity limit: 0.50
+
+Random seed: -1
+# -1 => generate one
+
+Integer parameters: false
+Parameter ranges:
+# Fields _MUST_ be separated by tabs

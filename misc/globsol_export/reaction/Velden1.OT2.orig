@@ -1,0 +1,141 @@
+ Output from FIND_GLOBAL_MIN on  07/12/2004  at  14:26:11.
+ Version for the system is: November 22, 2003
+ 
+ Codelist file name is: Velden1G.CDL
+ Box data file name is: Velden1.DT2                   
+ 
+ 
+ Initial box:
+ [    0.0000D+00,   0.2000D+02 ] [    0.0000D+00,   0.1100D+01 ]
+ [    0.0000D+00,   0.2000D+02 ] [    0.0000D+00,   0.2000D+02 ]
+ 
+ BOUND_CONSTRAINT:
+   F F   F F   F F   F F
+ 
+ ---------------------------------------
+ CONFIGURATION VALUES:
+ 
+ EPS_DOMAIN:   0.1000D-09   MAXITR:  100000
+ MAX_CPU_SECONDS:    0.3600D+04
+ DO_INTERVAL_NEWTON: T  QUADRATIC: T  FULL_SPACE: F
+ VERY_GOOD_INITIAL_GUESS: F
+ USE_SUBSIT: T
+ OUTPUT UNIT:           7  PRINT_LENGTH:           1
+ PHI_MUST_CONVERGE: T
+ EQ_CNS_MUST_CONVERGE: T
+ INEQ_CNS_MUST_CONVERGE: T
+ PHI_THICKNESS_FACTOR:   0.5000D+00
+ EQ_CNS_THICKNESS_FACTOR:   0.5000D+00
+ INEQ_CNS_THICKNESS_FACTOR:   0.5000D+00
+ PHI_MUST_CONVERGE: T
+ EQ_CNS_MUST_CONVERGE: T
+ INEQ_CNS_MUST_CONVERGE: T
+ PHI_CONVERGENCE_FACTOR:   0.1000D-13
+ EQ_CNS_CONVERGENCE_FACTOR:   0.1000D-13
+ INEQ_CNS_CONVERGENCE_FACTOR:   0.1000D-13
+ CONTINUITY_ACROSS_BRANCHES: F
+ SINGULAR_EXPANSION_FACTOR:   0.1000D+02
+ HEURISTIC PARAMETER ALPHA:   0.5000D+00
+ APPROX_OPT_BEFORE_BISECTION: F
+ USE_TAYLOR_EQUALITY_CONSTRAINTS F
+ USE_TAYLOR_INEQ_CONSTRAINTS F
+ USE_TAYLOR_OBJECTIVE F
+ USE_TAYLOR_EQ_CNS_GRD F
+ USE_TAYLOR_GRAD F
+ USE_TAYLOR_INEQ_CNS_GRD F
+ USE_TAYLOR_REDUCED_INEWTON T
+ COSY_POLYNOMIAL_ORDER           5
+ LEAST_SQUARES_FUNCTIONS: F
+ NONLINEAR_SYSTEM: T
+ Default point optimizer was used. 
+ Success in initial location of an approximate optimum
+ feasible_region returned:
+ [    0.5527D-01,   0.5527D-01 ] [    0.1000D+01,   0.1000D+01 ]
+ [    0.5014D+01,   0.5014D+01 ] [    0.3765D+00,   0.3765D+00 ]
+ after the interval Newton method, APPROX_OPT_BOX
+ Box coordinates:
+ [    0.5517D-01,   0.5537D-01 ] [    0.9999D+00,   0.1000D+01 ]
+ [    0.5013D+01,   0.5014D+01 ] [    0.3764D+00,   0.3766D+00 ]
+PHI:
+ [    0.0000D+00,   0.5613D-06 ]
+ B%LIUI(1,*):
+ F F F F
+ B%LIUI(2,*):
+ F F F F
+ B%SIDE(*):
+ F F F F
+ B%PEEL(*):
+ F F F F
+ Level:            0
+ Box contains the following approximate root:
+    0.5527D-01   0.1000D+01   0.5014D+01   0.3765D+00
+
+ OBJECTIVE ENCLOSURE AT APPROXIMATE ROOT:
+ [    0.1277D-20,   0.1277D-20 ]
+ Unknown =  T    Contains_root = T
+ Changed coordinates:
+ F F F F
+ U0:
+ [    0.0000D+00,   0.1000D+01 ]
+ V:
+ [   -0.1000D+01,   0.1000D+01 ] [   -0.1000D+01,   0.1000D+01 ]
+ [   -0.1000D+01,   0.1000D+01 ] [   -0.1000D+01,   0.1000D+01 ]
+ After PEEL_BOUNDARY, number of boxes in current_list:           1
+ After COMPLEMENT_LIST, number of boxes in current_list:           6
+ 
+ THERE WERE NO BOXES IN THE LIST OF SMALL BOXES.
+ 
+ LIST OF BOXES CONTAINING VERIFIED FEASIBLE POINTS:
+ 
+ Box no.:           1
+ Box coordinates:
+ [    0.5517D-01,   0.5537D-01 ] [    0.9999D+00,   0.1000D+01 ]
+ [    0.5013D+01,   0.5014D+01 ] [    0.3764D+00,   0.3766D+00 ]
+PHI:
+ [    0.0000D+00,   0.5613D-06 ]
+ B%LIUI(1,*):
+ F F F F
+ B%LIUI(2,*):
+ F F F F
+ B%SIDE(*):
+ F F F F
+ B%PEEL(*):
+ F F F F
+ Level:            0
+ Box contains the following approximate root:
+    0.5527D-01   0.1000D+01   0.5014D+01   0.3765D+00
+
+ OBJECTIVE ENCLOSURE AT APPROXIMATE ROOT:
+ [    0.1277D-20,   0.1277D-20 ]
+ Unknown =  T    Contains_root = T
+ Changed coordinates:
+ F F F F
+ U0:
+ [    0.0000D+00,   0.1000D+01 ]
+ V:
+ [   -0.1000D+01,   0.1000D+01 ] [   -0.1000D+01,   0.1000D+01 ]
+ [   -0.1000D+01,   0.1000D+01 ] [   -0.1000D+01,   0.1000D+01 ]
+ -------------------------------------------------
+ ALGORITHM COMPLETED WITH LESS THAN THE MAXIMUM NUMBER,
+      100000  OF BOXES.
+ No. dense interval residual evaluations -- gradient code list:           25
+ Number of orig. system inverse midpoint preconditioner rows:            4
+ Number of solutions for a component in the expanded system:         1235
+ Total number of forward_substitutions:          124
+ Number of Gauss--Seidel steps on the dense system:            4
+ Number of gradient evaluations from a gradient code list:            6
+ Total number of dense slope matrix evaluations:           10
+ Total number second-order interval evaluations of the
+       original function:           10
+ Total number dense interval constraint evaluations:           84
+ Total number dense interval constraint gradient component
+       evaluations:          112
+ Total number dense point constraint gradient component
+       evaluations:           96
+ Number of times the approximate solver was called:            1
+ Number of times SUBSIT rejected a box:            6
+ Total number of boxes processed in loop:            6
+ BEST_ESTIMATE:    0.0000D+00
+ Overall CPU time:    0.5859D-02
+ CPU time in PEEL_BOUNDARY:    0.0000D+00
+ CPU time in REDUCED_INTERVAL_NEWTON:    0.0000D+00
