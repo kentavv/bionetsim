@@ -108,7 +108,7 @@ fitness_lang_exec(QString &script, const PathwayMatrix &pem, double &fitness, Ma
   }
 
   {
-    string str = (const char*)script;
+    string str = script.toStdString();
     myinputlen = str.length();
     myinput = new char[myinputlen+1];
     myinputptr = myinput;
